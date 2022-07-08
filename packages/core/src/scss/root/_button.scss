@@ -1,0 +1,10 @@
+@mixin buttonProps {
+    --base-button-border-width: var(--base-global-border-width);
+    --base-button-font-weight: 400;
+    --base-button-padding-horizontal: 1rem;
+    --base-button-padding-vertical: 0.5rem;
+    --base-button-size-multiplier: 1;
+    --base-button-icon-spacing: 0.5rem;
+    --base-button-transition-duration: var(--base-transition-fast);
+    --base-button-border-radius: calc(var(--base-global-radius) * var(--base-button-size-multiplier));
+}

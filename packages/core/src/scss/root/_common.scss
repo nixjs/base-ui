@@ -1,0 +1,21 @@
+@mixin commonProps {
+    // + kbd
+    --base-kbd-background: rgb(246, 247, 248);
+    --base-kbd-color: #393a34;
+    --base-kbd-border-radius: var(--base-global-radius);
+    --base-kbd-border-color: rgba(0, 0, 0, 0.1);
+    // + code
+    --base-code-background: rgb(246, 247, 248);
+    --base-code-border-radius: var(--base-global-radius);
+    --base-code-font-size: 90%;
+    --base-code-padding-horizontal: 0.1rem;
+    --base-code-padding-vertical: 0.1rem;
+    // + pre
+    --prism-color: #393a34;
+    --prism-background-color: #f6f8fa;
+    --base-pre-background: #f5f6f7;
+    --base-pre-border-radius: var(--base-code-border-radius);
+    --base-pre-color: inherit;
+    --base-pre-line-height: 1.45;
+    --base-pre-padding: 1rem;
+}

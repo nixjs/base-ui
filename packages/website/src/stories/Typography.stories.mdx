@@ -1,0 +1,81 @@
+import { Meta, Typeset } from '@storybook/addon-docs'
+
+<Meta title="Foundations/Typography" />
+
+<style>{`
+`}</style>
+
+export const typography = {
+    type: {
+        primary: `system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont,
+        'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'`
+    },
+    weight: {
+        w100: 100,
+        w200: 200,
+        w300: 300,
+        w400: 400,
+        w500: 500,
+        w600: 600,
+        w700: 700,
+        w900: 900
+    },
+    size: {
+        'text-12': 12,
+        'text-14': 14,
+        'text-16': 16,
+        'text-18': 18,
+        'text-20': 20,
+        'text-24': 24,
+        'text-26': 26,
+        'text-28': 28,
+        'text-30': 30,
+        'text-32': 32,
+        'text-34': 34,
+        'text-36': 36,
+        'text-48': 48,
+        'text-56': 56,
+        'text-64': 64,
+        'text-72': 72,
+        'text-128': 128
+    }
+}
+
+export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+
+# Typography
+
+**Weights:**
+
+-   **100**: `.w100`
+-   **200**: `.w200`
+-   **300**: `.w300`
+-   **400**: `.w400`
+-   **500**: `.w500`
+-   **600**: `.w600`
+-   **900**: `.w900`
+
+<Typeset
+    fontSizes={[
+        Number(typography.size['text-12']),
+        Number(typography.size['text-14']),
+        Number(typography.size['text-16']),
+        Number(typography.size['text-18']),
+        Number(typography.size['text-20']),
+        Number(typography.size['text-24']),
+        Number(typography.size['text-26']),
+        Number(typography.size['text-28']),
+        Number(typography.size['text-30']),
+        Number(typography.size['text-32']),
+        Number(typography.size['text-34']),
+        Number(typography.size['text-36']),
+        Number(typography.size['text-48']),
+        Number(typography.size['text-56']),
+        Number(typography.size['text-64']),
+        Number(typography.size['text-72']),
+        Number(typography.size['text-128'])
+    ]}
+    fontWeight={typography.weight.w400}
+    sampleText={SampleText}
+    fontFamily={typography.type.primary}
+/>

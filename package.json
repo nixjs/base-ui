@@ -1,0 +1,84 @@
+{
+    "name": "@nixjs23n6/baseui",
+    "description": "A React Component library with completely unstyled, fully accessible UI components.",
+    "private": true,
+    "license": "MIT",
+    "workspaces": [
+        "packages/*"
+    ],
+    "keywords": [
+        "react",
+        "react-ui",
+        "components",
+        "react-components",
+        "react-library"
+    ],
+    "homepage": "https://github.com/nixjs/base-ui#readme",
+    "author": {
+        "url": "https://github.com/nixjs",
+        "name": "nghinv"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nixjs/base-ui.git"
+    },
+    "scripts": {
+        "clean": "lerna clean --yes",
+        "bootstrap": "lerna bootstrap --hoist",
+        "publish": "lerna publish",
+        "test": "lerna run test",
+        "lint": "lerna run lint",
+        "build": "lerna run build",
+        "format:check": "lerna run format:check",
+        "storybook:build": "lerna run storybook:build",
+        "prepare": "is-ci || husky install",
+        "postinstall": "lerna run postinstall",
+        "new-version": "lerna version --no-git-tag-version",
+        "pre-publish": "run-s new-version reset commit-version",
+        "npm-publish:experimental": "lerna exec -- npm publish --access public --tag experimental",
+        "npm-publish:canary": "lerna exec -- npm publish --access public --tag canary",
+        "publish:experimental": "run-s pre-publish npm-publish:experimental",
+        "publish:canary": "run-s pre-publish npm-publish:canary"
+    },
+    "devDependencies": {
+        "@babel/preset-react": "^7.18.6",
+        "@babel/preset-typescript": "^7.18.6",
+        "@commitlint/cli": "^17.0.3",
+        "@commitlint/config-conventional": "^17.0.3",
+        "@types/eslint": "^8.4.5",
+        "@types/eslint-plugin-prettier": "^3.1.0",
+        "@types/node": "^18.0.3",
+        "@types/prettier": "^2.6.3",
+        "@types/react": "^18.0.15",
+        "@types/react-dom": "^18.0.6",
+        "@types/react-transition-group": "^4.4.5",
+        "@types/styled-components": "^5.1.25",
+        "@typescript-eslint/eslint-plugin": "^5.30.5",
+        "@typescript-eslint/parser": "^5.30.5",
+        "babel-plugin-styled-components": "^2.0.7",
+        "classnames": "^2.3.1",
+        "eslint": "^8.19.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-jest": "^26.5.3",
+        "eslint-plugin-jsx-a11y": "^6.6.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.30.1",
+        "husky": "^8.0.1",
+        "is-ci": "^3.0.1",
+        "lerna": "^5.1.8",
+        "npm-run-all": "^4.1.5",
+        "prettier": "^2.7.1",
+        "rimraf": "^3.0.2",
+        "typescript": "^4.7.4"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "engines": {
+        "node": ">= 14"
+    },
+    "bugs": {
+        "url": "https://github.com/nixjs/base-ui/issues"
+    },
+    "version": "0.0.0"
+}

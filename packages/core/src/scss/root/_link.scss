@@ -1,0 +1,6 @@
+@mixin linkProps {
+    --base-link-color: var(--base-font-color);
+    --base-link-hover-color: var(--base-color-primary);
+    --base-link-active-color: var(--base-link-color);
+    --base-link-hover-text-decoration: underline;
+}

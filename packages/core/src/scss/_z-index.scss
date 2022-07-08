@@ -1,0 +1,5 @@
+@each $key, $val in $zIndexes {
+    .zindex-#{$key} {
+        z-index: var(--base-z-index-#{$key}) !important;
+    }
+}

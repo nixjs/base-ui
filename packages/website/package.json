@@ -1,0 +1,33 @@
+{
+    "name": "@nixjs23n6/baseui-website",
+    "version": "1.0.0-alpha.0",
+    "description": "UI KIT.",
+    "author": "nghinv",
+    "license": "MIT",
+    "scripts": {
+        "start": "start-storybook -p 6006",
+        "build": "build-storybook"
+    },
+    "dependencies": {
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    },
+    "peerDependencies": {
+        "react": ">=16",
+        "react-dom": ">=16",
+        "styled-components": ">=5"
+    },
+    "devDependencies": {
+        "@storybook/addon-actions": "^6.5.9",
+        "@storybook/addon-essentials": "^6.5.9",
+        "@storybook/addon-interactions": "^6.5.9",
+        "@storybook/addon-links": "^6.5.9",
+        "@storybook/addon-postcss": "^2.0.0",
+        "@storybook/addon-storysource": "^6.5.9",
+        "@storybook/react": "^6.5.9",
+        "@storybook/testing-library": "^0.0.13",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "styled-components": "^5.3.5"
+    }
+}

@@ -1,0 +1,8 @@
+@mixin breakpointProps {
+    --base-breakpoint-xs: 0;
+    --base-breakpoint-sm: 576px;
+    --base-breakpoint-md: 768px;
+    --base-breakpoint-lg: 992px;
+    --base-breakpoint-xl: 1200px;
+    --base-breakpoint-xxl: 1400px;
+}
