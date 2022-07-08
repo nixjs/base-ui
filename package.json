@@ -28,7 +28,7 @@
         "publish": "lerna publish",
         "test": "lerna run test",
         "lint": "lerna run lint",
-        "build": "lerna run build",
+        "build": "lerna run build --include-dependencies --stream --ignore @nixjs23n6/baseui-website",
         "format:check": "lerna run format:check",
         "storybook:build": "lerna run storybook:build",
         "prepare": "is-ci || husky install",

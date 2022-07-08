@@ -10,7 +10,14 @@
     },
     "dependencies": {
         "react": "^17.0.2",
-        "react-dom": "^17.0.2"
+        "react-dom": "^17.0.2",
+        "@nixjs23n6/baseui-core": "^1.0.0-alpha.0",
+        "@nixjs23n6/baseui-hook": "^1.0.0-alpha.0",
+        "@nixjs23n6/baseui-grid": "^1.0.0-alpha.0",
+        "@nixjs23n6/baseui-modal": "^1.0.0-alpha.0",
+        "@nixjs23n6/baseui-pagination": "^1.0.0-alpha.0",
+        "@nixjs23n6/baseui-tab": "^1.0.0-alpha.0",
+        "@nixjs23n6/baseui-button": "^0.0.0"
     },
     "peerDependencies": {
         "react": ">=16",

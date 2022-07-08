@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --base-font-family-base: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif,
         BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     --base-color-primary: #2563eb;
@@ -50,7 +50,6 @@
     --base-color-dark-3: #9ca3af;
     --base-color-dark-4: #d1d5db;
 
-    /* button */
     --button-color-primary: #ffffff;
     --button-color-secondary: #ffffff;
     --button-color-success: #ffffff;
@@ -62,4 +61,4 @@
     --button-color-outline: var(--base-color-dark);
     --button-color-gradient: var(--base-color-light);
     --base-button-font-weight: 500;
-}
+} */
