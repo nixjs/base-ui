@@ -1,6 +1,6 @@
 
 <p align="center">
-  <a href="https://nextui.org">
+  <a href="https://base-ui.vercel.app">
       <img width="20%" src="https://raw.githubusercontent.com/nixjs/base-ui/main/baseUIDark.svg" alt="baseui" />
       <h1 align="center">BaseUI</h1>
   </a>
