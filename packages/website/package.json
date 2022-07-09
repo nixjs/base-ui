@@ -17,6 +17,7 @@
         "@nixjs23n6/baseui-modal": "^1.0.0-alpha.0",
         "@nixjs23n6/baseui-pagination": "^1.0.0-alpha.0",
         "@nixjs23n6/baseui-tab": "^1.0.0-alpha.0",
+        "@nixjs23n6/baseui-spinner": "^0.0.0",
         "@nixjs23n6/baseui-button": "^0.0.0"
     },
     "peerDependencies": {

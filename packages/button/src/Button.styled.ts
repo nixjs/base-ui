@@ -6,12 +6,15 @@ import { sizeOptions, variantOptions } from './constants'
 
 interface StyledButtonProps {
     ref?: React.Ref<HTMLElement>
-    as?: React.ElementType
+    as: React.ElementType
     variant: ButtonTypes.ButtonVariant
     size?: ButtonTypes.ButtonSize
     className?: string
     disabled?: boolean
     autoWidth?: boolean
+    minWidth?: string
+    width?: string
+    noContent?: boolean
     outline?: boolean
     onClick: () => void
     [name: string]: any
@@ -38,12 +41,15 @@ const ButtonVariantStyled = ({ variant, outline }: { variant: ButtonTypes.Button
         `
     )
 }
+
 const ButtonSizeStyled = (props: any) => {
     if (props.size && (sizeOptions[props.size as ButtonTypes.ButtonSize] as ButtonTypes.ButtonCss)) {
         const buttonStyled = sizeOptions[props.size as ButtonTypes.ButtonSize]
+        const paddingLeft = props.noContent ? '0' : buttonStyled.paddingLeft
+        const paddingRight = props.noContent ? '0' : buttonStyled.paddingRight
         return css`
-            --base-button-padding-left: ${buttonStyled.paddingLeft};
-            --base-button-padding-right: ${buttonStyled.paddingRight};
+            --base-button-padding-left: ${paddingLeft};
+            --base-button-padding-right: ${paddingRight};
             --base-button-min-width: ${buttonStyled.minWidth};
             --base-button-height: ${buttonStyled.height};
             --base-button-width: ${buttonStyled.width};
@@ -70,11 +76,13 @@ export const ButtonStyled = styled.div<StyledButtonProps & StyledProps>`
     transition-duration: var(--base-button-transition-duration);
     transition-property: color, background, border-color;
     user-select: none;
+    position: relative;
+    overflow: hidden;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     appearance: none;
-    height: var(--base-button--height);
+    height: var(--base-button-height);
     line-height: var(--base-button-line-height);
     width: var(--base-button-width);
     min-width: var(--base-button-min-width);
@@ -86,22 +94,30 @@ export const ButtonStyled = styled.div<StyledButtonProps & StyledProps>`
     ${ButtonCommonStyled}
     ${ButtonVariantStyled}
     ${ButtonSizeStyled}
-    ${(props: any) => {
-        if (props.autoWidth) {
-            return css`
-                --base-button-min-width: min-content;
-            `
-        }
-    }}
     .button {
+        &-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: var(--base-button-text-z-index, 200);
+        }
         &-icon {
+            &--start,
+            &--end {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                color: inherit;
+                z-index: var(--base-button-icon-start-z-index, 100);
+            }
             &--start {
-                margin-right: var(--base-button-icon-spacing);
-                display: var(--base-button-icon-display, inline-flex);
+                left: var(--base-button-icon-start-left, 0.875rem);
             }
             &--end {
-                margin-left: var(--base-button-icon-spacing);
-                display: var(--base-button-icon-display, inline-flex);
+                right: var(--base-button-icon-start-right, 0.875rem);
             }
         }
         &-loading {
@@ -131,12 +147,61 @@ export const ButtonStyled = styled.div<StyledButtonProps & StyledProps>`
     }
 
     ${(props: any) => {
+        if (props.autoWidth) {
+            return css`
+                --base-button-min-width: min-content;
+            `
+        }
+    }}
+
+    ${(props: any) => {
         if (props.disabled) {
             return css`
                 cursor: not-allowed;
                 opacity: 0.5;
             `
         }
+    }} 
+    
+    ${(props: any) => {
+        if (props.width) {
+            return css`
+                --base-button-width: ${props.width};
+            `
+        }
+    }}
+    
+    ${(props: any) => {
+        if (props.minWidth) {
+            return css`
+                --base-button-min-width: ${props.minWidth};
+            `
+        }
+    }}
+
+    ${(props: any) => {
+        if (props.noContent) {
+            return css`
+                --base-button-min-width: min-content;
+                height: var(--base-button-height);
+                width: var(--base-button-height);
+                .button {
+                    &-loading {
+                        &--start,
+                        &--end {
+                            .loading {
+                                &-spinner {
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            `
+        }
+    }}
+
+    ${(props: any) => {
         return css`
             ${props?.overrideStyled || ''}
         `

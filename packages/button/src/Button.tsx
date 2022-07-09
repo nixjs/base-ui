@@ -5,10 +5,11 @@ import { ButtonTypes } from './types'
 import { ButtonLoading } from './ButtonLoading'
 import { ButtonStyled } from './Button.styled'
 
-export interface ButtonPropArg {
+export interface ButtonPropArg extends StyledProps {
     children?: React.ReactNode
     variant?: ButtonTypes.ButtonVariant
     size?: ButtonTypes.ButtonSize
+    icon?: React.ReactNode
     startIcon?: React.ReactNode
     endIcon?: React.ReactNode
     type?: 'submit' | 'button'
@@ -19,6 +20,8 @@ export interface ButtonPropArg {
     className?: string
     disabled?: boolean
     autoWidth?: boolean
+    minWidth?: string
+    width?: string
     outline?: boolean
     as?: React.ElementType
     href?: string
@@ -28,14 +31,17 @@ export interface ButtonPropArg {
 
 const DEFAULT_BUTTON_TAG = 'button' as const
 
-export const Button = React.forwardRef<HTMLButtonElement, ButtonPropArg & StyledProps>(
-    (
-        {
+export const Button: React.FC<ButtonPropArg> = React.forwardRef<HTMLButtonElement, ButtonPropArg>(
+    (props: ButtonPropArg, ref: React.Ref<HTMLButtonElement | null>) => {
+        const {
             children,
             variant = 'primary',
             size = 'md',
             autoWidth = false,
+            minWidth,
             outline = false,
+            width,
+            icon,
             startIcon,
             endIcon,
             isLoading,
@@ -46,19 +52,17 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonPropArg & Styled
             className,
             disabled,
             as: Tag = DEFAULT_BUTTON_TAG,
-            onClick,
-            ...props
-        },
-        ref
-    ) => {
-        const ourProps = Utils.omit(props, ['className', 'size', 'outline', 'autoWidth'])
+            onClick
+        } = props
+        const ourProps = Utils.omit(props, ['className', 'size', 'outline', 'autoWidth', 'width', 'minWidth'])
 
         const renderContent = React.useMemo(() => {
             if (!isLoading) {
                 return (
                     <>
+                        {icon && <span className="button-icon button-icon">{icon}</span>}
                         {startIcon && <span className="button-icon button-icon--start">{startIcon}</span>}
-                        {children}
+                        {children && <span className="button-text">{children}</span>}
                         {endIcon && <span className="button-icon button-icon--end">{endIcon}</span>}
                     </>
                 )
@@ -86,7 +90,10 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonPropArg & Styled
                 className={className}
                 disabled={disabled}
                 outline={outline}
+                minWidth={minWidth}
                 autoWidth={autoWidth}
+                width={width}
+                noContent={!children}
                 onClick={onClick}
                 ref={ref}
                 {...ourProps}
