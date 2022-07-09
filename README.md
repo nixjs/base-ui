@@ -1,6 +1,6 @@
 
 <p align="center">
-  <a href="https://base-ui.vercel.app">
+  <a href="https://62c98570d7f9e1b5f9bb3ead-pmfavfyxng.chromatic.com/">
       <img width="20%" src="https://raw.githubusercontent.com/nixjs/base-ui/main/baseUIDark.svg" alt="baseui" />
       <h1 align="center">BaseUI</h1>
   </a>
@@ -64,4 +64,4 @@ export const Default: React.FC = () => {
 
 ## Documentation
 
-Visit https://base-ui.vercel.app/ to view the full documentation or https://github.com/nixjs/base-ui/tree/main/packages/website
+Visit <a href="https://62c98570d7f9e1b5f9bb3ead-pmfavfyxng.chromatic.com/" target="_blank">Website</a> to view the full documentation or https://github.com/nixjs/base-ui/tree/main/packages/website
