@@ -9,16 +9,16 @@
         "build": "build-storybook"
     },
     "dependencies": {
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2",
+        "@nixjs23n6/baseui-button": "^0.0.0",
         "@nixjs23n6/baseui-core": "^1.0.0-alpha.0",
-        "@nixjs23n6/baseui-hook": "^1.0.0-alpha.0",
         "@nixjs23n6/baseui-grid": "^1.0.0-alpha.0",
+        "@nixjs23n6/baseui-hook": "^1.0.0-alpha.0",
         "@nixjs23n6/baseui-modal": "^1.0.0-alpha.0",
         "@nixjs23n6/baseui-pagination": "^1.0.0-alpha.0",
-        "@nixjs23n6/baseui-tab": "^1.0.0-alpha.0",
         "@nixjs23n6/baseui-spinner": "^0.0.0",
-        "@nixjs23n6/baseui-button": "^0.0.0"
+        "@nixjs23n6/baseui-tab": "^1.0.0-alpha.0",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
     },
     "peerDependencies": {
         "react": ">=16",
@@ -34,6 +34,7 @@
         "@storybook/addon-storysource": "^6.5.9",
         "@storybook/react": "^6.5.9",
         "@storybook/testing-library": "^0.0.13",
+        "chromatic": "^6.7.0",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
         "styled-components": "^5.3.5"
