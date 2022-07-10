@@ -60,19 +60,22 @@ export const Pagination = Utils.forwardRefWithAs(function List<TTag extends Reac
         (value: PaginationItemPropArg, index: number) => {
             if (value === DOTS) {
                 const isBefore = index < range.indexOf(active)
+                const className = `pagination-item-dot--${isBefore ? 'prev' : 'next'}`
                 return (
                     <button
                         type="button"
                         tabIndex={0}
                         key={`pagination-item-dot-${value}-${index}`}
-                        className="pagination-item pagination-item-dot"
+                        className={classNames('pagination-item pagination-item-dot', className)}
                         onClick={() =>
                             isBefore
                                 ? setPage(active - dotsJump >= 1 ? active - dotsJump : 1)
                                 : setPage(active + dotsJump <= total ? active + dotsJump : total)
                         }
                     >
-                        ...
+                        <span aria-hidden="true" className="pagination-item-3dot">
+                            ...
+                        </span>
                     </button>
                 )
             }
@@ -82,7 +85,7 @@ export const Pagination = Utils.forwardRefWithAs(function List<TTag extends Reac
                     tabIndex={0}
                     key={`pagination-item-number-${value}-${index}`}
                     onClick={() => value !== active && setPage(value)}
-                    className={classNames('pagination-item pagination-item-number', {
+                    className={classNames('pagination-item pagination-item--number', {
                         active: value === active
                     })}
                 >
@@ -116,24 +119,56 @@ export const Pagination = Utils.forwardRefWithAs(function List<TTag extends Reac
         children: (
             <div className="pagination-content">
                 {withEdges && (
-                    <button type="button" aria-label="First" onClick={first} disabled={active === 1}>
-                        {firstEdgeLabel || <span aria-hidden="true">«</span>}
+                    <button
+                        className="pagination-item pagination-item--first"
+                        type="button"
+                        aria-label="First"
+                        onClick={first}
+                        disabled={active === 1}
+                    >
+                        {firstEdgeLabel || (
+                            <span aria-hidden="true" className="pagination-item-icon">
+                                «
+                            </span>
+                        )}
                     </button>
                 )}
                 {withControls && (
-                    <button type="button" aria-label="Previous" onClick={onPrevious} disabled={!loop && active === 1}>
-                        {prevControlLabel || '‹'}
+                    <button
+                        className="pagination-item pagination-item--prev"
+                        type="button"
+                        aria-label="Previous"
+                        onClick={onPrevious}
+                        disabled={!loop && active === 1}
+                    >
+                        {prevControlLabel || <span className="pagination-item-icon">‹</span>}
                     </button>
                 )}
                 {range.map(renderItem)}
                 {withControls && (
-                    <button type="button" aria-label="Next" onClick={onNext} disabled={!loop && active === total}>
-                        {nextControlLabel || '›'}
+                    <button
+                        className="pagination-item pagination-item--next"
+                        type="button"
+                        aria-label="Next"
+                        onClick={onNext}
+                        disabled={!loop && active === total}
+                    >
+                        {nextControlLabel || <span className="pagination-item-icon">›</span>}
                     </button>
                 )}
                 {withEdges && (
-                    <button type="button" aria-label="Last" onClick={last} disabled={active === total}>
-                        {lastEdgeLabel || <span aria-hidden="true">»</span>}
+                    <button
+                        className="pagination-item pagination-item--last"
+                        type="button"
+                        aria-label="Last"
+                        onClick={last}
+                        disabled={active === total}
+                    >
+                        {lastEdgeLabel || (
+                            <span aria-hidden="true" className="pagination-item-icon">
+                                »
+                            </span>
+                        )}
                     </button>
                 )}
             </div>
