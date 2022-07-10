@@ -1,5 +1,4 @@
 import React from 'react'
-import { css } from 'styled-components'
 import { ComponentMeta } from '@storybook/react'
 import { AnimationName } from '@nixjs23n6/baseui-core'
 import { Modal } from '@nixjs23n6/baseui-modal'

@@ -7,7 +7,6 @@ export const TabsStyled = styled.div<StyledProps>`
             border: none;
             outline: 0;
             transition: all 0.3s ease;
-            margin-left: var(--base-tab-item-margin, 0.25rem);
             margin-right: var(--base-tab-item-margin, 0.25rem);
             padding: var(--base-tab-item-padding, 0.625rem) 0;
             border-radius: var(--base-tab-item-radius, 0.5rem);
@@ -15,7 +14,7 @@ export const TabsStyled = styled.div<StyledProps>`
             width: var(--base-tab-item-width, 100%);
             color: var(--base-tab-item-color, var(--base-white));
             &:hover {
-                &:not(:disabled) {
+                &:not(:disabled, .active) {
                     background-color: var(--base-tab-item-background-hover, var(--base-white-5));
                 }
             }
@@ -56,11 +55,13 @@ export const TabsStyled = styled.div<StyledProps>`
                 flex-direction: row;
                 .tabs {
                     &-tab {
-                        margin-top: var(--base-tab-item-margin, 0.25rem);
                         margin-bottom: var(--base-tab-item-margin, 0.25rem);
                         margin-left: 0;
                         margin-right: 0;
                         min-width: var(--base-tab-item-width, 12rem);
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
                     }
                     &-panels {
                         --base-tab-panels-margin: 0;
@@ -71,7 +72,6 @@ export const TabsStyled = styled.div<StyledProps>`
                 flex-direction: column;
                 .tabs {
                     &-tab {
-                        &:first-child,
                         &:last-child {
                             --base-tab-item-margin: 0;
                         }
