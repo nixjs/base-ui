@@ -70,10 +70,10 @@ export default {
         },
         options: {
             description:
-                'Style for countdown: \n `CountdownTypes.CountdownTimerOptionals` \n- `className`: Set class for countdown container - Default: `Empty`. \n- `day`: Set label for day - Default: `day`. \n- `hour`: Set label for hour - Default: `hour`. \n- `minute`: Set label for minute - Default: `minute`. \n- `second`: Set label for second - Default: `second`.',
+                'Style for countdown: \n- `className`: Set class for countdown container - Default: `Empty`. \n- `day`: Set label for day - Default: `day`. \n- `hour`: Set label for hour - Default: `hour`. \n- `minute`: Set label for minute - Default: `minute`. \n- `second`: Set label for second - Default: `second`.',
             table: {
                 type: {
-                    summary: 'Object'
+                    summary: 'Object<CountdownTypes.CountdownTimerOptionals>'
                 }
             }
         }
