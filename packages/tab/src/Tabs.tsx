@@ -67,7 +67,7 @@ export const TabRoot = Utils.forwardRefWithAs(function List<TTag extends React.E
         'animation'
     ])
 
-    const ourProps = { ref: tabsRef, className: 'tab-container' }
+    const ourProps = { ref: tabsRef, className: 'tabs-container' }
 
     const slot = React.useMemo<any>(() => ({}), [])
 

@@ -18,7 +18,7 @@ export const List = Utils.forwardRefWithAs(function List<TTag extends React.Elem
 
     const theirProps = props
 
-    const ourProps = { ref: listRef, className: 'tab-list', 'aria-orientation': orientation, role: 'tablist' }
+    const ourProps = { ref: listRef, className: 'tabs-list', 'aria-orientation': orientation, role: 'tablist' }
 
     const slot = React.useMemo<ListRenderPropArg>(() => ({}), [])
 

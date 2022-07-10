@@ -182,16 +182,3 @@ export const Sizes: React.FC = () => (
         </div>
     </>
 )
-
-export const Text: React.FC = () => (
-    <>
-        <div className="d-flex align-items-center justify-content-center gap-4">
-            <div className="d-flex flex-column flex-shrink-0">
-                <p className="w700 mb-12 text-secondary text-center">Medium</p>
-                <div className="d-flex justify-content-center">
-                    <Spinner variant="danger" size="md" content="loader-3" />
-                </div>
-            </div>
-        </div>
-    </>
-)

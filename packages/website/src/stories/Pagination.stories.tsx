@@ -1,6 +1,5 @@
 import React from 'react'
 import { ComponentMeta } from '@storybook/react'
-import { css } from 'styled-components'
 import { Pagination } from '@nixjs23n6/baseui-pagination'
 
 export default {

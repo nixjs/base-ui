@@ -14,7 +14,7 @@ export const Panels = Utils.forwardRefWithAs(function Panels<TTag extends React.
 
     const theirProps = props
 
-    const ourProps = { ref: panelsRef, className: 'tab-panels' }
+    const ourProps = { ref: panelsRef, className: 'tabs-panels' }
 
     const slot = React.useMemo<PanelsRenderPropArg>(() => ({}), [])
 
