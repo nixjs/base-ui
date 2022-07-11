@@ -160,12 +160,10 @@ export const Default: React.FC = () => {
             </Button>
             <Modal as={'div'} open={isPayment} onClose={closePaymentModal} closeOnEsc>
                 <Modal.Header className="mb-16">
-                    <h3 className="text-dark">Payment successful</h3>
+                    <h3>Payment successful</h3>
                 </Modal.Header>
                 <Modal.Body className="mb-24">
-                    <p className="text-dark">
-                        Your payment has been successfully submitted. We’ve sent you an email with all of the details of your order.
-                    </p>
+                    <p>Your payment has been successfully submitted. We’ve sent you an email with all of the details of your order.</p>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button type="button" onClick={closePaymentModal}>
@@ -175,10 +173,10 @@ export const Default: React.FC = () => {
             </Modal>
             <Modal as={'div'} open={isDeactivate} onClose={onCloseDeactivateModal} showClose>
                 <Modal.Header className="mb-16">
-                    <h2 className="text-dark">Deactivate account</h2>
+                    <h2>Deactivate account</h2>
                 </Modal.Header>
                 <Modal.Body className="mb-24">
-                    <p className="text-dark">
+                    <p>
                         Are you sure you want to deactivate your account? All of your data will be permanently removed. This action cannot
                         be undone.
                     </p>
@@ -257,12 +255,10 @@ export const Transitions: React.FC = () => {
             </Button>
             <Modal as={'div'} open={open} onClose={onCloseModal} animation animationName={animation} closeOnEsc>
                 <Modal.Header className="mb-16">
-                    <h3 className="text-dark">Payment successful</h3>
+                    <h3>Payment successful</h3>
                 </Modal.Header>
                 <Modal.Body className="mb-24">
-                    <p className="text-dark">
-                        Your payment has been successfully submitted. We’ve sent you an email with all of the details of your order.
-                    </p>
+                    <p>Your payment has been successfully submitted. We’ve sent you an email with all of the details of your order.</p>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button type="button" onClick={onCloseModal}>
@@ -293,12 +289,10 @@ export const UnmountOnExit: React.FC = () => {
             <br />
             <Modal as={'div'} open={open} onClose={onCloseModal} unmountOnExit closeOnEsc>
                 <Modal.Header className="mb-16">
-                    <h3 className="text-dark">Payment successful</h3>
+                    <h3>Payment successful</h3>
                 </Modal.Header>
                 <Modal.Body className="mb-24">
-                    <p className="text-dark">
-                        Your payment has been successfully submitted. We’ve sent you an email with all of the details of your order.
-                    </p>
+                    <p>Your payment has been successfully submitted. We’ve sent you an email with all of the details of your order.</p>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button type="button" onClick={onCloseModal}>

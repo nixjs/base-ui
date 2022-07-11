@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import { StyledProps } from '@nixjs23n6/baseui-core'
 
 export const ModalStyled = styled.div<StyledProps>`
-    --base-modal-background-color: var(--base-color-white);
+    --base-modal-background-color: var(--base-background-contrast);
     --base-modal-max-width: 28rem;
     --base-modal-radius: 1rem;
     --base-modal-ring-offset-shadow: 0 0 transparent;
@@ -62,7 +62,9 @@ export const ModalStyled = styled.div<StyledProps>`
             display: none;
             position: fixed;
             inset: 0;
-            background-color: var(--base-modal-background-color-overlay, rgba(0, 0, 0, 0.2));
+            background-color: var(--base-modal-background-color-overlay, var(--base-black));
+            opacity: 0.5;
+            z-index: 1054;
         }
         &.inactive {
             display: none;

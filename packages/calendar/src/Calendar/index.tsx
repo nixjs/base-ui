@@ -51,9 +51,9 @@ export const BaseCalendar: React.FC<CalendarPropArg> = ({
     const [selectedDate, setSelectedDate] = React.useState<Date>(date || today)
 
     const handleDateChange = (e: Date) => {
-        const date = formatDateTo24Hours(fnsFormat(new Date(e), DATE_TIME_ORIGINAL), selectedTime)
+        const _date = formatDateTo24Hours(fnsFormat(new Date(e), DATE_TIME_ORIGINAL), selectedTime)
         if (typeof onChange === 'function') {
-            onChange(parse(date, DATE_TIME_ORIGINAL, new Date()))
+            onChange(parse(_date, DATE_TIME_ORIGINAL, new Date()))
         }
     }
 
@@ -81,8 +81,8 @@ export const BaseCalendar: React.FC<CalendarPropArg> = ({
             if (!selectedDate) {
                 onDone(null)
             }
-            const date = formatDateTo24Hours(fnsFormat(selectedDate as Date, DATE_TIME_ORIGINAL), selectedTime)
-            onDone(parseISO(date))
+            const _date = formatDateTo24Hours(fnsFormat(selectedDate as Date, DATE_TIME_ORIGINAL), selectedTime)
+            onDone(parseISO(_date))
         }
     }
 

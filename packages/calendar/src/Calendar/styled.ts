@@ -5,7 +5,7 @@ import { TimePickerBaseStyled } from '../TimePicker/styled'
 export const CalendarBaseStyled = css`
     --calendar-arrow-background-image: var(--base-arrow-background-image);
     --calendar-panel-color: white;
-    --calendar-panel-background: linear-gradient(37.55deg, #3d3d3d 0, #353535 100%);
+    --calendar-panel-background: var(--base-background-contrast);
     --calendar-cell-date: 14.2857%;
     --calendar-cell-month: 25%;
 
@@ -22,7 +22,7 @@ export const CalendarBaseStyled = css`
     --calendar-cell-hover-background: var(--base-transparent);
 
     --calendar-cell-offrange-color: var(--base-white-5);
-    --calendar-cell-offrange-background: var(--base-dark);
+    --calendar-cell-offrange-background: var(--base-black);
     .calendar {
         display: inline-block;
         &-panel-container {

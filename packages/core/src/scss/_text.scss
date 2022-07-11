@@ -48,6 +48,10 @@ $weights: 100, 200, 300, 400, 500, 600, 700, 900;
     color: var(--base-color-dark) !important;
 }
 
+.text-contract {
+    color: var(--base-background-contrast) !important;
+}
+
 .text-black {
     color: black !important;
 }
