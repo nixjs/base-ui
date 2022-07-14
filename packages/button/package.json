@@ -1,6 +1,6 @@
 {
     "name": "@nixjs23n6/baseui-button",
-    "version": "0.0.0",
+    "version": "1.0.0-alpha.1",
     "description": "Button",
     "author": {
         "url": "https://github.com/nixjs",
@@ -38,8 +38,8 @@
         "url": "https://github.com/nixjs/base-ui/issues"
     },
     "devDependencies": {
-        "@nixjs23n6/baseui-core": "^1.0.0-alpha.0",
-        "@nixjs23n6/baseui-hook": "^1.0.0-alpha.0"
+        "@nixjs23n6/baseui-core": "^1.0.0-alpha.1",
+        "@nixjs23n6/baseui-hook": "^1.0.0-alpha.1"
     },
     "peerDependencies": {
         "@nixjs23n6/baseui-core": "^0.0.0",
