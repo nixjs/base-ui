@@ -44,5 +44,6 @@
         "styled-components": "^5.3.5"
     },
     "readme": "ERROR: No README data found!",
-    "_id": "@nixjs23n6/baseui-website@1.0.0-alpha.0"
+    "_id": "@nixjs23n6/baseui-website@1.0.0-alpha.0",
+    "gitHead": "97f56e8082eaf2538fdbc779482df4b0e45edd75"
 }

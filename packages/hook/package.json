@@ -41,5 +41,6 @@
     "classnames": ">=2",
     "react": ">=16",
     "styled-components": ">=5"
-  }
+  },
+  "gitHead": "97f56e8082eaf2538fdbc779482df4b0e45edd75"
 }
