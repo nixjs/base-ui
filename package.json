@@ -25,7 +25,7 @@
     "scripts": {
         "clean": "lerna clean --yes",
         "bootstrap": "lerna bootstrap --hoist",
-        "publish": "lerna publish --no-verify-access",
+        "publish": "lerna publish --no-verify-access -ignore @nixjs23n6/baseui-website",
         "test": "lerna run test",
         "lint": "lerna run lint",
         "build": "lerna run build --include-dependencies --stream --ignore @nixjs23n6/baseui-website",
