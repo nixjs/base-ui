@@ -1,6 +1,6 @@
 {
     "name": "@nixjs23n6/baseui-grid",
-    "version": "1.0.0-alpha.6",
+    "version": "1.0.0-alpha.7",
     "description": "Grid",
     "author": {
         "url": "https://github.com/nixjs",
@@ -38,7 +38,7 @@
         "url": "https://github.com/nixjs/base-ui/issues"
     },
     "devDependencies": {
-        "@nixjs23n6/baseui-core": "^1.0.0-alpha.6"
+        "@nixjs23n6/baseui-core": "^1.0.0-alpha.7"
     },
     "peerDependencies": {
         "@nixjs23n6/baseui-core": "^0.0.0",
