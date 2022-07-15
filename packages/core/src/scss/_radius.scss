@@ -1,6 +1,6 @@
 @use 'sass:math';
 
-$radiuses: 0, 8, 16, 50;
+$radiuses: 0, 8, 16, 50, 9999;
 
 $radiusKeys: (
     'tl': (
@@ -19,20 +19,24 @@ $radiusKeys: (
 );
 
 @each $r in $radiuses {
-    @if ($r==50) {
+    @if ($r==9999) {
+        .rd-rounded-full {
+            border-radius: 9999px !important;
+        }
+    } @else if ($r==50) {
         .rd-circle {
-            border-radius: 50%;
+            border-radius: 50% !important;
         }
     } @else {
         @each $k, $v in $radiusKeys {
             @if $k==0 {
                 .rd-#{$r} {
-                    border-radius: #{math.div($r, 2)}rem;
+                    border-radius: #{math.div($r, 2)}rem !important;
                 }
             } @else {
                 @each $s1, $s2 in $v {
                     .rd-#{$k}-#{$r} {
-                        border-#{$s1}-#{$s2}-radius: #{math.div($r, 16)}rem;
+                        border-#{$s1}-#{$s2}-radius: #{math.div($r, 16)}rem !important;
                     }
                 }
             }
