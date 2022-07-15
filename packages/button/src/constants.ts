@@ -156,20 +156,20 @@ export const variantOptions: ButtonTypes.ButtonVariantProps = {
     },
     link: {
         backgroundColor: 'transparent',
-        color: '',
+        color: 'var(--button-color-link, var(--base-button-color))',
         borderColor: 'transparent',
 
         backgroundColorDisable: '',
         colorDisable: '',
         borderColorDisable: '',
 
-        backgroundColorActive: 'var(--button-background-color-link-active, var(--base-color-link))',
+        backgroundColorActive: 'transparent',
         colorActive: 'var(--button-color-link-active, var(--base-button-color))',
-        borderColorActive: 'var(--button-border-color-link-active, var(--base-color-link))',
+        borderColorActive: 'transparent',
 
-        backgroundColorHover: 'var(--button-background-color-link-hover, var(--base-color-link-2))',
+        backgroundColorHover: 'transparent',
         colorHover: 'var(--button-color-link-hover, var(--base-button-color))',
-        borderColorHover: 'var(--button-border-color-link-hover, var(--base-color-link-2))'
+        borderColorHover: 'transparent'
     },
     gradient: {
         backgroundColor: 'var(--base-color-gradient)',

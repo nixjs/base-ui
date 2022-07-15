@@ -60,7 +60,7 @@ export const Button: React.FC<ButtonPropArg> = React.forwardRef<HTMLButtonElemen
             if (!isLoading) {
                 return (
                     <>
-                        {icon && <span className="button-icon button-icon">{icon}</span>}
+                        {icon && <span className="d-flex button-icon button-icon">{icon}</span>}
                         {startIcon && <span className="button-icon button-icon--start">{startIcon}</span>}
                         {children && <span className="button-text">{children}</span>}
                         {endIcon && <span className="button-icon button-icon--end">{endIcon}</span>}
