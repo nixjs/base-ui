@@ -31,7 +31,7 @@ $radiusKeys: (
         @each $k, $v in $radiusKeys {
             @if $k==0 {
                 .rd-#{$r} {
-                    border-radius: #{math.div($r, 2)}rem !important;
+                    border-radius: #{math.div($r, 16)}rem !important;
                 }
             } @else {
                 @each $s1, $s2 in $v {
