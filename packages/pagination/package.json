@@ -1,6 +1,6 @@
 {
     "name": "@nixjs23n6/baseui-pagination",
-    "version": "1.0.0-alpha.7",
+    "version": "1.0.0-alpha.8",
     "description": "Pagination",
     "author": {
         "url": "https://github.com/nixjs",
@@ -38,8 +38,8 @@
         "url": "https://github.com/nixjs/base-ui/issues"
     },
     "devDependencies": {
-        "@nixjs23n6/baseui-core": "^1.0.0-alpha.7",
-        "@nixjs23n6/baseui-hook": "^1.0.0-alpha.7"
+        "@nixjs23n6/baseui-core": "^1.0.0-alpha.8",
+        "@nixjs23n6/baseui-hook": "^1.0.0-alpha.8"
     },
     "peerDependencies": {
         "@nixjs23n6/baseui-core": "^0.0.0",
