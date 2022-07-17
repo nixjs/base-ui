@@ -23,9 +23,9 @@ export const variantOptions: ButtonTypes.ButtonVariantProps = {
         color: 'var(--button-color-primary, var(--base-button-color))',
         borderColor: 'var(--base-color-primary-1)',
 
-        backgroundColorDisable: '',
-        colorDisable: '',
-        borderColorDisable: '',
+        backgroundColorDisable: 'var(--button-background-color-primary-disable, rgba(0,0,0,.4))',
+        colorDisable: 'var(--button-color-primary-disable, rgba(255,255,255,.4))',
+        borderColorDisable: 'var(--button-border-color-primary-disable, rgba(0,0,0,.4))',
 
         backgroundColorActive: 'var(--button-background-color-primary-active, var(--base-color-primary))',
         colorActive: 'var(--button-color-primary-active, var(--base-button-color))',
@@ -40,9 +40,9 @@ export const variantOptions: ButtonTypes.ButtonVariantProps = {
         color: 'var(--button-color-secondary, var(--base-button-color))',
         borderColor: 'var(--base-color-secondary-1)',
 
-        backgroundColorDisable: '',
-        colorDisable: '',
-        borderColorDisable: '',
+        backgroundColorDisable: 'var(--button-background-color-secondary-disable, rgba(0,0,0,.4))',
+        colorDisable: 'var(--button-color-secondary-disable, rgba(255,255,255,.4))',
+        borderColorDisable: 'var(--button-border-color-secondary-disable, rgba(0,0,0,.4))',
 
         backgroundColorActive: 'var(--button-background-color-secondary-active, var(--base-color-secondary))',
         colorActive: 'var(--button-color-secondary-active, var(--base-button-color))',
@@ -57,9 +57,9 @@ export const variantOptions: ButtonTypes.ButtonVariantProps = {
         color: 'var(--button-color-success, var(--base-button-color))',
         borderColor: 'var(--base-color-success-1)',
 
-        backgroundColorDisable: '',
-        colorDisable: '',
-        borderColorDisable: '',
+        backgroundColorDisable: 'var(--button-background-color-success-disable, rgba(0,0,0,.4))',
+        colorDisable: 'var(--button-color-success-disable, rgba(255,255,255,.4))',
+        borderColorDisable: 'var(--button-border-color-success-disable, rgba(0,0,0,.4))',
 
         backgroundColorActive: 'var(--button-background-color-success-active, var(--base-color-success))',
         colorActive: 'var(--button-color-success-active, var(--base-button-color))',
@@ -74,9 +74,9 @@ export const variantOptions: ButtonTypes.ButtonVariantProps = {
         color: 'var(--button-color-danger, var(--base-button-color))',
         borderColor: 'var(--base-color-danger-1)',
 
-        backgroundColorDisable: '',
-        colorDisable: '',
-        borderColorDisable: '',
+        backgroundColorDisable: 'var(--button-background-color-danger-disable, rgba(0,0,0,.4))',
+        colorDisable: 'var(--button-color-danger-disable, rgba(255,255,255,.4))',
+        borderColorDisable: 'var(--button-border-color-danger-disable, rgba(0,0,0,.4))',
 
         backgroundColorActive: 'var(--button-background-color-danger-active, var(--base-color-danger))',
         colorActive: 'var(--button-color-danger-active, var(--base-button-color))',
@@ -91,9 +91,9 @@ export const variantOptions: ButtonTypes.ButtonVariantProps = {
         color: 'var(--button-color-warning, var(--base-button-color))',
         borderColor: 'var(--base-color-warning-2)',
 
-        backgroundColorDisable: '',
-        colorDisable: '',
-        borderColorDisable: '',
+        backgroundColorDisable: 'var(--button-background-color-warning-disable, rgba(0,0,0,.4))',
+        colorDisable: 'var(--button-color-warning-disable, rgba(255,255,255,.4))',
+        borderColorDisable: 'var(--button-border-color-warning-disable, rgba(0,0,0,.4))',
 
         backgroundColorActive: 'var(--button-background-color-warning-active, var(--base-color-warning))',
         colorActive: 'var(--button-color-warning-active, var(--base-button-color))',
@@ -108,9 +108,9 @@ export const variantOptions: ButtonTypes.ButtonVariantProps = {
         color: 'var(--button-color-info, var(--base-button-color))',
         borderColor: 'var(--base-color-info-1)',
 
-        backgroundColorDisable: '',
-        colorDisable: '',
-        borderColorDisable: '',
+        backgroundColorDisable: 'var(--button-background-color-info-disable, rgba(0,0,0,.4))',
+        colorDisable: 'var(--button-color-info-disable, rgba(255,255,255,.4))',
+        borderColorDisable: 'var(--button-border-color-info-disable, rgba(0,0,0,.4))',
 
         backgroundColorActive: 'var(--button-background-color-info-active, var(--base-color-info))',
         colorActive: 'var(--button-color-info-active, var(--base-button-color))',
@@ -125,9 +125,9 @@ export const variantOptions: ButtonTypes.ButtonVariantProps = {
         color: 'var(--button-color-light, var(--base-color-dark-1))',
         borderColor: 'var(--base-color-light-1)',
 
-        backgroundColorDisable: '',
-        colorDisable: '',
-        borderColorDisable: '',
+        backgroundColorDisable: 'var(--button-background-color-light-disable, rgba(0,0,0,.4))',
+        colorDisable: 'var(--button-color-light-disable, rgba(255,255,255,.4))',
+        borderColorDisable: 'var(--button-border-color-light-disable, rgba(0,0,0,.4))',
 
         backgroundColorActive: 'var(--button-background-color-light-active, var(--base-color-light))',
         colorActive: 'var(--button-color-light-active, var(--base-color-dark))',
@@ -142,9 +142,9 @@ export const variantOptions: ButtonTypes.ButtonVariantProps = {
         color: 'var(--button-color-dark, var(--base-button-color))',
         borderColor: 'var(--base-color-dark-1)',
 
-        backgroundColorDisable: '',
-        colorDisable: '',
-        borderColorDisable: '',
+        backgroundColorDisable: 'var(--button-background-color-dark-disable, rgba(0,0,0,.4))',
+        colorDisable: 'var(--button-color-dark-disable, rgba(255,255,255,.4))',
+        borderColorDisable: 'var(--button-border-color-dark-disable, rgba(0,0,0,.4))',
 
         backgroundColorActive: 'var(--button-background-color-dark-active, var(--base-color-dark))',
         colorActive: 'var(--button-color-dark-active, var(--base-button-color))',
@@ -159,9 +159,9 @@ export const variantOptions: ButtonTypes.ButtonVariantProps = {
         color: 'var(--button-color-link, var(--base-button-color))',
         borderColor: 'transparent',
 
-        backgroundColorDisable: '',
-        colorDisable: '',
-        borderColorDisable: '',
+        backgroundColorDisable: 'transparent',
+        colorDisable: 'var(--button-color-link-disable, rgba(255,255,255,.4))',
+        borderColorDisable: 'transparent',
 
         backgroundColorActive: 'transparent',
         colorActive: 'var(--button-color-link-active, var(--base-button-color))',
@@ -176,9 +176,9 @@ export const variantOptions: ButtonTypes.ButtonVariantProps = {
         color: 'var(--button-color-gradient, var(--base-button-color))',
         borderColor: 'var(--base-color-gradient)',
 
-        backgroundColorDisable: '',
-        colorDisable: '',
-        borderColorDisable: '',
+        backgroundColorDisable: 'var(--button-background-color-gradient-disable, rgba(0,0,0,.4))',
+        colorDisable: 'var(--button-color-gradient-disable, rgba(255,255,255,.4))',
+        borderColorDisable: 'var(--button-border-color-gradient-disable, rgba(0,0,0,.4))',
 
         backgroundColorActive: 'var(--button-background-color-dark-active, var(--base-color-dark))',
         colorActive: 'var(--button-color-dark-active, var(--base-button-color))',

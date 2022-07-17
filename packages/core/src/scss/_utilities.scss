@@ -4,6 +4,24 @@
     content: '';
 }
 
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+.cursor-not-allowed {
+    cursor: not-allowed !important;
+}
+
+.cursor-default {
+    cursor: default !important;
+}
+
+.text-ellipsis-nowrap {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 .align-baseline {
     vertical-align: baseline !important;
 }
