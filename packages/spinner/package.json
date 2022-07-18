@@ -1,6 +1,6 @@
 {
     "name": "@nixjs23n6/baseui-spinner",
-    "version": "1.0.0-alpha.15",
+    "version": "1.0.0-alpha.16",
     "description": "Spinner",
     "author": {
         "url": "https://github.com/nixjs",
@@ -38,8 +38,8 @@
         "url": "https://github.com/nixjs/base-ui/issues"
     },
     "devDependencies": {
-        "@nixjs23n6/baseui-core": "^1.0.0-alpha.15",
-        "@nixjs23n6/baseui-hook": "^1.0.0-alpha.15"
+        "@nixjs23n6/baseui-core": "^1.0.0-alpha.16",
+        "@nixjs23n6/baseui-hook": "^1.0.0-alpha.16"
     },
     "peerDependencies": {
         "@nixjs23n6/baseui-core": "^0.0.0",
