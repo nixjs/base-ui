@@ -198,7 +198,6 @@ export const sizeOptions: ButtonTypes.ButtonSizeProps = {
         minWidth: '4rem',
         paddingLeft: '0.375rem',
         paddingRight: '0.375rem',
-        lineHeight: '1.5rem',
         radius: '0.375rem'
     },
     sm: {
@@ -208,7 +207,6 @@ export const sizeOptions: ButtonTypes.ButtonSizeProps = {
         minWidth: '9rem',
         paddingLeft: '0.625rem',
         paddingRight: '0.625rem',
-        lineHeight: '2.5rem',
         radius: '0.525rem'
     },
     md: {
@@ -218,7 +216,6 @@ export const sizeOptions: ButtonTypes.ButtonSizeProps = {
         minWidth: '12rem',
         paddingLeft: '0.875rem',
         paddingRight: '0.875rem',
-        lineHeight: '2.5rem',
         radius: '0.625rem'
     },
     lg: {
@@ -228,7 +225,6 @@ export const sizeOptions: ButtonTypes.ButtonSizeProps = {
         minWidth: '15rem',
         paddingLeft: '1.25rem',
         paddingRight: '1.25rem',
-        lineHeight: '2.75rem',
         radius: '0.75rem'
     },
     xl: {
@@ -238,7 +234,6 @@ export const sizeOptions: ButtonTypes.ButtonSizeProps = {
         minWidth: '18rem',
         paddingLeft: '1.5rem',
         paddingRight: '1.5rem',
-        lineHeight: '3.5rem',
         radius: '0.875rem'
     },
     xxl: {
@@ -248,7 +243,6 @@ export const sizeOptions: ButtonTypes.ButtonSizeProps = {
         minWidth: '20rem',
         paddingLeft: '1.75rem',
         paddingRight: '1.75rem',
-        lineHeight: '3.75rem',
         radius: '1rem'
     }
 }

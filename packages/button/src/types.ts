@@ -35,7 +35,6 @@ export namespace ButtonTypes {
         height: string
         minWidth: string
         width: string
-        lineHeight: string
         radius: string
     }
 

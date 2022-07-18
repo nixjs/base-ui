@@ -54,7 +54,6 @@ const ButtonSizeStyled = (props: any) => {
             --base-button-height: ${buttonStyled.height};
             --base-button-width: ${buttonStyled.width};
             --base-button-radius: ${buttonStyled.radius};
-            --base-button-line-height: ${buttonStyled.lineHeight};
             --base-button-size-multiplier: ${buttonStyled.fontSizeMultiplier};
         `
     }
@@ -83,7 +82,7 @@ export const ButtonStyled = styled.div<StyledButtonProps & StyledProps>`
     justify-content: center;
     appearance: none;
     height: var(--base-button-height);
-    line-height: var(--base-button-line-height);
+    line-height: var(--base-button-line-height, 1.5);
     width: var(--base-button-width);
     min-width: var(--base-button-min-width);
     font-size: calc(1rem * var(--base-button-size-multiplier));
