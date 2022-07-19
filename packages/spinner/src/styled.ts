@@ -24,9 +24,9 @@ const SpinnerVariantStyled = ({
     liteColor
 }: { variant: SpinnerTypes.SpinnerVariant } & SpinnerTypes.SpinnerColorCss) => {
     return css`
-            --base-spinner-brand: ${brandColor ? brandColor : variantOptions[variant].brandColor}};
-            --base-spinner-lite: ${liteColor ? liteColor : '#ffffff'}
-        `
+        --base-spinner-brand: ${brandColor ? brandColor : variantOptions[variant].brandColor};
+        --base-spinner-lite: ${liteColor ? liteColor : '#ffffff'};
+    `
 }
 
 const getWidthLoader = (Loader: any, props: any) => {
@@ -270,7 +270,7 @@ export const Loader = styled.div<StyledSpinnerProps & SpinnerTypes.SpinnerColorC
     }
     ${SpinnerSizeStyled}
     ${SpinnerVariantStyled}
-        ${(props: any) => {
+    ${(props: any) => {
         return css`
             ${props?.overrideStyled || ''}
         `
