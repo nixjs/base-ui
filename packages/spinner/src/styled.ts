@@ -1,8 +1,9 @@
 import styled, { css } from 'styled-components'
+import { StyledProps } from '@nixjs23n6/baseui-core'
 import { SpinnerTypes } from './types'
 import { sizeOptions, variantOptions, Loader1, Loader2 } from './constants'
 
-interface StyledProps {
+interface StyledSpinnerProps {
     variant: SpinnerTypes.SpinnerVariant
     size: SpinnerTypes.SpinnerSize
 }
@@ -29,16 +30,16 @@ const SpinnerVariantStyled = ({
 }
 
 const getWidthLoader = (Loader: any, props: any) => {
-    if (props.size && (Loader1[props.size as SpinnerTypes.SpinnerSize] as SpinnerTypes.SpinnerBorderCss)) {
-        const { liteWidth } = Loader1[props.size as SpinnerTypes.SpinnerSize]
+    if (props.size && (Loader[props.size as SpinnerTypes.SpinnerSize] as SpinnerTypes.SpinnerBorderCss)) {
+        const { liteWidth } = Loader[props.size as SpinnerTypes.SpinnerSize]
         return css`
-            border-width: ${liteWidth}rem;
+            border-width: var(--base-spinner-lite-border-width, ${liteWidth}rem);
         `
     }
     return ''
 }
 
-export const Loader = styled.div<StyledProps & SpinnerTypes.SpinnerColorCss>`
+export const Loader = styled.div<StyledSpinnerProps & SpinnerTypes.SpinnerColorCss & StyledProps>`
     .loader {
         border-radius: 50%;
         display: inline-block;
@@ -269,4 +270,9 @@ export const Loader = styled.div<StyledProps & SpinnerTypes.SpinnerColorCss>`
     }
     ${SpinnerSizeStyled}
     ${SpinnerVariantStyled}
+        ${(props: any) => {
+        return css`
+            ${props?.overrideStyled || ''}
+        `
+    }}
 `
