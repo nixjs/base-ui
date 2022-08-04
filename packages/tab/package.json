@@ -1,6 +1,6 @@
 {
     "name": "@nixjs23n6/baseui-tab",
-    "version": "1.0.0-alpha.19",
+    "version": "1.0.0-alpha.20",
     "description": "Tab",
     "author": {
         "url": "https://github.com/nixjs",
@@ -38,8 +38,8 @@
         "url": "https://github.com/nixjs/base-ui/issues"
     },
     "devDependencies": {
-        "@nixjs23n6/baseui-core": "^1.0.0-alpha.19",
-        "@nixjs23n6/baseui-hook": "^1.0.0-alpha.19"
+        "@nixjs23n6/baseui-core": "^1.0.0-alpha.20",
+        "@nixjs23n6/baseui-hook": "^1.0.0-alpha.20"
     },
     "peerDependencies": {
         "@nixjs23n6/baseui-core": "^0.0.0",

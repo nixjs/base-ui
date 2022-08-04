@@ -33,10 +33,17 @@ const ButtonVariantStyled = ({ variant, outline }: { variant: ButtonTypes.Button
                 color: ${variantOptions[variant].colorHover};
                 border-color: ${variantOptions[variant].borderColorHover};
             }
-            &:active {
+            &:active,
+            &.active {
                 background: ${variantOptions[variant].backgroundColorActive};
                 color: ${variantOptions[variant].colorActive};
                 border-color: ${variantOptions[variant].borderColorActive};
+            }
+            &:disabled,
+            &.disabled {
+                background: ${variantOptions[variant].borderColorDisable};
+                color: ${variantOptions[variant].colorDisable};
+                border-color: ${variantOptions[variant].borderColorDisable};
             }
         `
     )
