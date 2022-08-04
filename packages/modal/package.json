@@ -1,6 +1,6 @@
 {
     "name": "@nixjs23n6/baseui-modal",
-    "version": "1.0.3-alpha.0",
+    "version": "1.0.4-alpha.0",
     "description": "Modal",
     "author": {
         "url": "https://github.com/nixjs",
@@ -38,8 +38,8 @@
         "url": "https://github.com/nixjs/base-ui/issues"
     },
     "devDependencies": {
-        "@nixjs23n6/baseui-core": "^1.0.3-alpha.0",
-        "@nixjs23n6/baseui-hook": "^1.0.3-alpha.0"
+        "@nixjs23n6/baseui-core": "1.0.4-alpha.0",
+        "@nixjs23n6/baseui-hook": "1.0.4-alpha.0"
     },
     "peerDependencies": {
         "@nixjs23n6/baseui-core": "^1.0.3-alpha.0",
