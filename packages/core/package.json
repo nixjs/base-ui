@@ -1,6 +1,6 @@
 {
     "name": "@nixjs23n6/baseui-core",
-    "version": "1.0.4-alpha.0",
+    "version": "1.0.6-alpha.0",
     "description": "Core UI",
     "author": {
         "url": "https://github.com/nixjs",
@@ -49,6 +49,5 @@
     "peerDependencies": {
         "react": ">=16",
         "styled-components": ">=5"
-    },
-    "gitHead": "dd5c75680934b9df4423bdcb23c0fe8abbed3956"
+    }
 }

@@ -1,6 +1,6 @@
 {
     "name": "@nixjs23n6/baseui-website",
-    "version": "1.0.5-alpha.0",
+    "version": "1.0.6-alpha.0",
     "description": "UI KIT.",
     "author": {
         "name": "nghinv"
@@ -11,16 +11,16 @@
         "build": "build-storybook"
     },
     "dependencies": {
-        "@nixjs23n6/baseui-button": "^1.0.5-alpha.0",
-        "@nixjs23n6/baseui-calendar": "^1.0.5-alpha.0",
-        "@nixjs23n6/baseui-core": "1.0.4-alpha.0",
-        "@nixjs23n6/baseui-countdown": "^1.0.5-alpha.0",
-        "@nixjs23n6/baseui-grid": "^1.0.5-alpha.0",
-        "@nixjs23n6/baseui-hook": "1.0.4-alpha.0",
-        "@nixjs23n6/baseui-modal": "^1.0.5-alpha.0",
-        "@nixjs23n6/baseui-pagination": "^1.0.5-alpha.0",
-        "@nixjs23n6/baseui-spinner": "^1.0.5-alpha.0",
-        "@nixjs23n6/baseui-tab": "^1.0.5-alpha.0",
+        "@nixjs23n6/baseui-button": "^1.0.6-alpha.0",
+        "@nixjs23n6/baseui-calendar": "^1.0.6-alpha.0",
+        "@nixjs23n6/baseui-core": "^1.0.6-alpha.0",
+        "@nixjs23n6/baseui-countdown": "^1.0.6-alpha.0",
+        "@nixjs23n6/baseui-grid": "^1.0.6-alpha.0",
+        "@nixjs23n6/baseui-hook": "^1.0.6-alpha.0",
+        "@nixjs23n6/baseui-modal": "^1.0.6-alpha.0",
+        "@nixjs23n6/baseui-pagination": "^1.0.6-alpha.0",
+        "@nixjs23n6/baseui-spinner": "^1.0.6-alpha.0",
+        "@nixjs23n6/baseui-tab": "^1.0.6-alpha.0",
         "react": "^17.0.2",
         "react-dom": "^17.0.2"
     },
@@ -44,6 +44,5 @@
         "styled-components": "^5.3.5"
     },
     "readme": "ERROR: No README data found!",
-    "_id": "@nixjs23n6/baseui-website@1.0.0-alpha.0",
-    "gitHead": "4acfd59318e99a8614816a36cbcb41a268aa686c"
+    "_id": "@nixjs23n6/baseui-website@1.0.0-alpha.0"
 }
