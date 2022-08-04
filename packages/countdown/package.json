@@ -42,12 +42,12 @@
         "@nixjs23n6/baseui-hook": "^1.0.3-alpha.0"
     },
     "peerDependencies": {
-        "@nixjs23n6/baseui-core": "^1.0.1-alpha.0",
-        "@nixjs23n6/baseui-hook": "^1.0.1-alpha.0",
+        "@nixjs23n6/baseui-core": "^1.0.3-alpha.0",
+        "@nixjs23n6/baseui-hook": "^1.0.3-alpha.0",
         "classnames": ">=2",
         "react": ">=16",
         "react-transition-group": "^4.4.2",
         "styled-components": ">=5"
     },
-    "gitHead": "cf4e85832a6ab67ddd4f6428b6bbad8c285c933c"
+    "gitHead": "dd5c75680934b9df4423bdcb23c0fe8abbed3956"
 }
