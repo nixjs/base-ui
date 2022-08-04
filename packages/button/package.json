@@ -42,8 +42,8 @@
         "@nixjs23n6/baseui-hook": "1.0.4-alpha.0"
     },
     "peerDependencies": {
-        "@nixjs23n6/baseui-core": "^1.0.3-alpha.0",
-        "@nixjs23n6/baseui-hook": "^1.0.3-alpha.0",
+        "@nixjs23n6/baseui-core": "^1.0.4-alpha.0",
+        "@nixjs23n6/baseui-hook": "^1.0.4-alpha.0",
         "classnames": ">=2",
         "react": ">=16",
         "styled-components": ">=5"
