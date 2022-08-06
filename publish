@@ -1,0 +1,13 @@
+#!/bin/bash
+PROJECT_ROOT="./packages"
+
+list() {
+    # List all paclage
+    ls -la $PROJECT_ROOT
+}
+
+
+{ list; } | while read package; do
+  echo "Package: $package"
+  yarn workspace @nixjs23n6/$package publish --no-node-version-check       
+done;
