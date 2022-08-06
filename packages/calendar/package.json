@@ -1,6 +1,6 @@
 {
     "name": "@nixjs23n6/baseui-calendar",
-    "version": "1.0.7-alpha.0",
+    "version": "1.0.8-alpha.0",
     "description": "Calendar",
     "author": {
         "url": "https://github.com/nixjs",
@@ -17,8 +17,7 @@
         "access": "public"
     },
     "files": [
-        "lib",
-        "src"
+        "lib"
     ],
     "repository": {
         "type": "git",
@@ -38,14 +37,14 @@
         "url": "https://github.com/nixjs/base-ui/issues"
     },
     "devDependencies": {
-        "@nixjs23n6/baseui-core": "^1.0.7-alpha.0",
-        "@nixjs23n6/baseui-hook": "^1.0.7-alpha.0"
+        "@nixjs23n6/baseui-core": "^1.0.8-alpha.0",
+        "@nixjs23n6/baseui-hook": "^1.0.8-alpha.0"
     },
     "peerDependencies": {
-        "@nixjs23n6/baseui-core": "^1.0.7-alpha.0",
-        "@nixjs23n6/baseui-hook": "^1.0.7-alpha.0",
+        "@nixjs23n6/baseui-core": "^1.0.8-alpha.0",
+        "@nixjs23n6/baseui-hook": "^1.0.8-alpha.0",
         "classnames": ">=2",
-        "react": ">=16",
+        "react": "^16.8.0 || ^17 || ^18",
         "react-transition-group": "^4.4.2",
         "styled-components": ">=5"
     },
