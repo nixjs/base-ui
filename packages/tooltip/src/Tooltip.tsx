@@ -1,53 +1,35 @@
 import React from 'react'
 import { createPortal } from 'react-dom'
+import { StyledProps } from '@nixjs23n6/baseui-core'
 import { usePopper } from 'react-popper'
 import classNames from 'classnames'
 import { Transition } from 'react-transition-group'
 import { TooltipTypes } from './types'
+import { TooltipStyled } from './styled'
 
 export interface TooltipPropArg {
     children: any
-    /**
-     * Content node for your component.
-     */
     content: React.ReactNode | string
-    /**
-     * Offset of the popover relative to its target.
-     */
     offset?: [number, number]
-    /**
-     * Callback fired when the component requests to be hidden.
-     */
     onHide?: () => void
-    /**
-     * Callback fired when the component requests to be shown.
-     */
     onShow?: () => void
-    /**
-     * Sets which event handlers you’d like provided to your toggle prop. You can specify one trigger or an array of them.
-     *
-     * @type 'hover' | 'focus' | 'click'
-     */
     trigger?: TooltipTypes.Trigger | TooltipTypes.Trigger[]
-    /**
-     * Describes the placement of your component after Popper.js has applied all the modifiers that may have flipped or altered the originally provided placement property.
-     */
-    placement?: 'auto' | 'top' | 'right' | 'bottom' | 'left'
-    /**
-     * Toggle the visibility of popover component.
-     */
+    placement?: TooltipTypes.Placement
     visible?: boolean
+    showArrow?: boolean
 }
 
-export const Tooltip: React.FC<TooltipPropArg> = ({
+export const Tooltip: React.FC<TooltipPropArg & StyledProps> = ({
     children,
     content,
-    offset = [0, 0],
+    offset = [0, 10],
     onHide,
     onShow,
     placement = 'top',
     trigger = 'hover',
     visible,
+    showArrow = true,
+    overrideStyled,
     ...rest
 }) => {
     const tooltipRef = React.useRef()
@@ -106,20 +88,22 @@ export const Tooltip: React.FC<TooltipPropArg> = ({
                         {(state) => {
                             const transitionClass = getTransitionClass(state)
                             return (
-                                <div
-                                    className={classNames(
-                                        `tooltip bs-tooltip-${placement === 'left' ? 'start' : placement === 'right' ? 'end' : placement}`,
-                                        transitionClass
-                                    )}
-                                    ref={setPopperElement}
-                                    role="tooltip"
-                                    style={styles.popper}
-                                    {...attributes.popper}
-                                    {...rest}
-                                >
-                                    <div className="tooltip-arrow" style={styles.arrow} ref={setArrowElement}></div>
-                                    <div className="tooltip-inner">{content}</div>
-                                </div>
+                                <TooltipStyled overrideStyled={overrideStyled}>
+                                    <div
+                                        className={classNames(
+                                            `tooltip tooltip-${placement === 'left' ? 'start' : placement === 'right' ? 'end' : placement}`,
+                                            transitionClass
+                                        )}
+                                        ref={setPopperElement}
+                                        role="tooltip"
+                                        style={styles.popper}
+                                        {...attributes.popper}
+                                        {...rest}
+                                    >
+                                        {showArrow && <div className="tooltip-arrow" style={styles.arrow} ref={setArrowElement} />}
+                                        <div className="tooltip-inner">{content}</div>
+                                    </div>
+                                </TooltipStyled>
                             )
                         }}
                     </Transition>,

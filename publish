@@ -1,13 +1,18 @@
 #!/bin/bash
 PROJECT_ROOT="./packages"
+BASE_UI="baseui-"
 
-list() {
-    # List all paclage
-    ls -la $PROJECT_ROOT
-}
+NODE_VERSION=$(node -p -e "require('./lerna.json').version")
 
+echo -e "\033[0;34mCurrent Version: $NODE_VERSION"
 
-{ list; } | while read package; do
-  echo "Package: $package"
-  yarn workspace @nixjs23n6/$package publish --no-node-version-check       
+for dir in $PROJECT_ROOT/*/; do
+    BASENAME=`basename "$dir"`
+    # echo $BASENAME
+    if [ $BASENAME != "website" ]
+    then
+        text=$(echo -e "\033[0;32mPublishing the $BASENAME packages.")
+        echo $text
+        yarn workspace @nixjs23n6/$BASE_UI$BASENAME publish --force
+    fi
 done;
