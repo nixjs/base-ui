@@ -1,6 +1,6 @@
 {
     "name": "@nixjs23n6/baseui-website",
-    "version": "1.0.10-alpha.0",
+    "version": "1.0.11-alpha.0",
     "description": "UI KIT.",
     "author": {
         "name": "nghinv"
@@ -11,17 +11,17 @@
         "build": "build-storybook"
     },
     "dependencies": {
-        "@nixjs23n6/baseui-button": "^1.0.10-alpha.0",
-        "@nixjs23n6/baseui-calendar": "^1.0.10-alpha.0",
-        "@nixjs23n6/baseui-core": "^1.0.10-alpha.0",
-        "@nixjs23n6/baseui-countdown": "^1.0.10-alpha.0",
-        "@nixjs23n6/baseui-grid": "^1.0.10-alpha.0",
-        "@nixjs23n6/baseui-hook": "^1.0.10-alpha.0",
-        "@nixjs23n6/baseui-modal": "^1.0.10-alpha.0",
-        "@nixjs23n6/baseui-pagination": "^1.0.10-alpha.0",
-        "@nixjs23n6/baseui-spinner": "^1.0.10-alpha.0",
-        "@nixjs23n6/baseui-tab": "^1.0.10-alpha.0",
-        "@nixjs23n6/baseui-tooltip": "^1.0.10-alpha.0",
+        "@nixjs23n6/baseui-button": "^1.0.11-alpha.0",
+        "@nixjs23n6/baseui-calendar": "^1.0.11-alpha.0",
+        "@nixjs23n6/baseui-core": "^1.0.11-alpha.0",
+        "@nixjs23n6/baseui-countdown": "^1.0.11-alpha.0",
+        "@nixjs23n6/baseui-grid": "^1.0.11-alpha.0",
+        "@nixjs23n6/baseui-hook": "^1.0.11-alpha.0",
+        "@nixjs23n6/baseui-modal": "^1.0.11-alpha.0",
+        "@nixjs23n6/baseui-pagination": "^1.0.11-alpha.0",
+        "@nixjs23n6/baseui-spinner": "^1.0.11-alpha.0",
+        "@nixjs23n6/baseui-tab": "^1.0.11-alpha.0",
+        "@nixjs23n6/baseui-tooltip": "^1.0.11-alpha.0",
         "react": "^17.0.2",
         "react-dom": "^17.0.2"
     },
