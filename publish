@@ -6,6 +6,8 @@ NODE_VERSION=$(node -p -e "require('./lerna.json').version")
 
 echo -e "\033[0;34mCurrent Version: $NODE_VERSION"
 
+yarn build
+
 for dir in $PROJECT_ROOT/*/; do
     BASENAME=`basename "$dir"`
     # echo $BASENAME
