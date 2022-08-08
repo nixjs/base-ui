@@ -1,6 +1,6 @@
 {
     "name": "@nixjs23n6/baseui-tooltip",
-    "version": "1.0.15-alpha.0",
+    "version": "1.0.16-alpha.0",
     "description": "Tooltip",
     "author": {
         "url": "https://github.com/nixjs",
@@ -37,8 +37,8 @@
         "url": "https://github.com/nixjs/base-ui/issues"
     },
     "devDependencies": {
-        "@nixjs23n6/baseui-core": "^1.0.15-alpha.0",
-        "@nixjs23n6/baseui-hook": "^1.0.15-alpha.0"
+        "@nixjs23n6/baseui-core": "^1.0.16-alpha.0",
+        "@nixjs23n6/baseui-hook": "^1.0.16-alpha.0"
     },
     "peerDependencies": {
         "@nixjs23n6/baseui-core": "^1.0.15-alpha.0",

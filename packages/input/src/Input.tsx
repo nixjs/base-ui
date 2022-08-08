@@ -168,8 +168,8 @@ export const Input = React.forwardRef<HTMLInputElement, InputPropArg & StyledPro
                             type={type}
                             placeholder={placeholder}
                             {...ourProps}
-                            {...register}
                             ref={Refs.composeRef(inputRef, ref)}
+                            {...register}
                             value={inputValue}
                             onChange={handleInputChange}
                             className={classNames(`${prefixContainerClass}-content-input`, inputClass)}
