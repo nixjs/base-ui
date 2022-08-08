@@ -23,6 +23,7 @@ interface InputPropArg extends React.InputHTMLAttributes<HTMLInputElement> {
     defaultValue?: string | number
     prefixHTML?: React.ReactNode
     suffixHTML?: React.ReactNode
+    register?: any
     onChangeValue?: (e: InputTypes.InputValue) => void
     onInputBlur?: InputTypes.FocusEvent
     onInputFocus?: InputTypes.FocusEvent
@@ -49,6 +50,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputPropArg & StyledPro
         'onInputValue',
         'onInputFocus',
         'onInputBlur',
+        'register',
         'overrideStyled'
     ])
 
@@ -72,6 +74,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputPropArg & StyledPro
         onChangeValue,
         onInputBlur,
         onInputFocus,
+        register,
         overrideStyled
     } = props
 
@@ -165,6 +168,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputPropArg & StyledPro
                         type={type}
                         placeholder={placeholder}
                         {...ourProps}
+                        {...register}
                         ref={Refs.composeRef(inputRef, ref)}
                         value={inputValue}
                         onChange={handleInputChange}
