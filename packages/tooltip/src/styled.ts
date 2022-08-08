@@ -3,31 +3,31 @@ import { StyledProps } from '@nixjs23n6/baseui-core'
 
 export const TooltipStyled = styled.div<StyledProps>`
     .tooltip {
-        --tooltip-zindex: 1070;
-        --tooltip-max-width: 12.5rem;
-        --tooltip-padding-x: 0.5rem;
-        --tooltip-padding-y: 0.5rem;
-        --tooltip-margin: 0;
-        --tooltip-color: var(--base-white-4);
-        --tooltip-background: var(--base-background-contrast);
-        --tooltip-radius: 0.25rem;
-        --tooltip-opacity: 0.9;
-        --tooltip-arrow-width: 0.8rem;
-        --tooltip-arrow-height: 0.4rem;
+        --base-tooltip-zindex: 1070;
+        --base-tooltip-max-width: 12.5rem;
+        --base-tooltip-padding-x: 0.5rem;
+        --base-tooltip-padding-y: 0.5rem;
+        --base-tooltip-margin: 0;
+        --base-tooltip-color: var(--base-white-4);
+        --base-tooltip-background: var(--base-background-contrast);
+        --base-tooltip-radius: 0.25rem;
+        --base-tooltip-opacity: 0.9;
+        --base-tooltip-arrow-width: 0.8rem;
+        --base-tooltip-arrow-height: 0.4rem;
 
-        z-index: var(--tooltip-zindex);
+        z-index: var(--base-tooltip-zindex);
         display: block;
         word-wrap: break-word;
         opacity: 0;
 
         &.show {
-            opacity: var(--tooltip-opacity);
+            opacity: var(--base-tooltip-opacity);
         }
 
         &-arrow {
             display: block;
-            width: var(--tooltip-arrow-width);
-            height: var(--tooltip-arrow-height);
+            width: var(--base-tooltip-arrow-width);
+            height: var(--base-tooltip-arrow-height);
             &::before {
                 position: absolute;
                 content: '';
@@ -39,48 +39,48 @@ export const TooltipStyled = styled.div<StyledProps>`
 
     .tooltip-top {
         .tooltip-arrow {
-            bottom: var(--tooltip-arrow-top-bottom, -6px);
+            bottom: var(--base-tooltip-arrow-top-bottom, -6px);
             &::before {
                 top: -1px;
-                border-width: var(--tooltip-arrow-height) calc(var(--tooltip-arrow-width) * 0.5) 0; // stylelint-disable-line function-disallowed-list
-                border-top-color: var(--tooltip-background);
+                border-width: var(--base-tooltip-arrow-height) calc(var(--base-tooltip-arrow-width) * 0.5) 0; // stylelint-disable-line function-disallowed-list
+                border-top-color: var(--base-tooltip-background);
             }
         }
     }
 
     .tooltip-end {
         .tooltip-arrow {
-            left: var(--tooltip-arrow-end-left, -6px);
-            width: var(--tooltip-arrow-height);
-            height: var(--tooltip-arrow-width);
+            left: var(--base-tooltip-arrow-end-left, -6px);
+            width: var(--base-tooltip-arrow-height);
+            height: var(--base-tooltip-arrow-width);
             &::before {
                 right: -1px;
-                border-width: calc(var(--tooltip-arrow-width) * 0.5) var(--tooltip-arrow-height) calc(var(--tooltip-arrow-width) * 0.5) 0; // stylelint-disable-line function-disallowed-list
-                border-right-color: var(--tooltip-background);
+                border-width: calc(var(--base-tooltip-arrow-width) * 0.5) var(--base-tooltip-arrow-height) calc(var(--base-tooltip-arrow-width) * 0.5) 0; // stylelint-disable-line function-disallowed-list
+                border-right-color: var(--base-tooltip-background);
             }
         }
     }
 
     .tooltip-bottom {
         .tooltip-arrow {
-            top: top: var(--tooltip-arrow-bottom-top, -6px);
+            top: top: var(--base-tooltip-arrow-bottom-top, -6px);
             &::before {
                 bottom: -1px;
-                border-width: 0 calc(var(--tooltip-arrow-width) * 0.5) var(--tooltip-arrow-height); // stylelint-disable-line function-disallowed-list
-                border-bottom-color: var(--tooltip-background);
+                border-width: 0 calc(var(--base-tooltip-arrow-width) * 0.5) var(--base-tooltip-arrow-height); // stylelint-disable-line function-disallowed-list
+                border-bottom-color: var(--base-tooltip-background);
             }
         }
     }
 
     .tooltip-start {
         .tooltip-arrow {
-            right: var(--tooltip-arrow-start-right, -6px);
-            width: var(--tooltip-arrow-height);
-            height: var(--tooltip-arrow-width);
+            right: var(--base-tooltip-arrow-start-right, -6px);
+            width: var(--base-tooltip-arrow-height);
+            height: var(--base-tooltip-arrow-width);
             &::before {
                 left: -1px;
-                border-width: calc(var(--tooltip-arrow-width) * 0.5) 0 calc(var(--tooltip-arrow-width) * 0.5) var(--tooltip-arrow-height); // stylelint-disable-line function-disallowed-list
-                border-left-color: var(--tooltip-background);
+                border-width: calc(var(--base-tooltip-arrow-width) * 0.5) 0 calc(var(--base-tooltip-arrow-width) * 0.5) var(--base-tooltip-arrow-height); // stylelint-disable-line function-disallowed-list
+                border-left-color: var(--base-tooltip-background);
             }
         }
     }
@@ -101,12 +101,12 @@ export const TooltipStyled = styled.div<StyledProps>`
     }
 
     .tooltip-inner {
-        max-width: var(--tooltip-max-width);
-        padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
-        color: var(--tooltip-color);
+        max-width: var(--base-tooltip-max-width);
+        padding: var(--base-tooltip-padding-y) var(--base-tooltip-padding-x);
+        color: var(--base-tooltip-color);
         text-align: center;
-        background-color: var(--tooltip-background);
-        border-radius: var(--tooltip-radius, 0);
+        background-color: var(--base-tooltip-background);
+        border-radius: var(--base-tooltip-radius, 0);
     }
 
     ${(props: any) => {

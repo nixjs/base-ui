@@ -3,54 +3,54 @@ import { StyledProps } from '@nixjs23n6/baseui-core'
 import { TimePickerBaseStyled } from '../TimePicker/styled'
 
 export const CalendarBaseStyled = css`
-    --calendar-arrow-background-image: var(--base-arrow-background-image);
-    --calendar-panel-color: white;
-    --calendar-panel-background: var(--base-background-contrast);
-    --calendar-cell-date: 14.2857%;
-    --calendar-cell-month: 25%;
+    --base-calendar-arrow-background-image: var(--base-arrow-background-image);
+    --base-calendar-panel-color: white;
+    --base-calendar-panel-background: var(--base-background-contrast);
+    --base-calendar-cell-date: 14.2857%;
+    --base-calendar-cell-month: 25%;
 
-    --calendar-cell-today-color: white;
-    --calendar-cell-today-background: var(--base-color-secondary-1);
+    --base-calendar-cell-today-color: white;
+    --base-calendar-cell-today-background: var(--base-color-secondary-1);
 
-    --calendar-cell-today-color: var(--base-white);
-    --calendar-cell-today-background: var(--base-color-primary-1);
+    --base-calendar-cell-today-color: var(--base-white);
+    --base-calendar-cell-today-background: var(--base-color-primary-1);
 
-    --calendar-cell-selected-color: var(--base-white);
-    --calendar-cell-selected-background: var(--base-color-secondary-2);
+    --base-calendar-cell-selected-color: var(--base-white);
+    --base-calendar-cell-selected-background: var(--base-color-secondary-2);
 
-    --calendar-cell-hover-color: var(--base-color-primary-1);
-    --calendar-cell-hover-background: var(--base-transparent);
+    --base-calendar-cell-hover-color: var(--base-color-primary-1);
+    --base-calendar-cell-hover-background: var(--base-transparent);
 
-    --calendar-cell-offrange-color: var(--base-white-5);
-    --calendar-cell-offrange-background: var(--base-black);
+    --base-calendar-cell-offrange-color: var(--base-white-5);
+    --base-calendar-cell-offrange-background: var(--base-black);
     .calendar {
         display: inline-block;
         &-panel-container {
-            color: var(--calendar-panel-color);
-            background: var(--calendar-panel-background);
-            box-shadow: var(--calendar-panel-box-shadow, none);
-            border-radius: var(--calendar-panel-radius, 0.5rem);
-            width: var(--calendar-panel-width, 100%);
-            max-width: var(--calendar-panel-max-width, auto);
-            padding: var(--calendar-panel-padding-top, 0.5rem) var(--calendar-panel-padding-right, 0.5rem)
-                var(--calendar-panel-padding-bottom, 0.5rem) var(--calendar-panel-padding-left, 0.5rem);
+            color: var(--base-calendar-panel-color);
+            background: var(--base-calendar-panel-background);
+            box-shadow: var(--base-calendar-panel-box-shadow, none);
+            border-radius: var(--base-calendar-panel-radius, 0.5rem);
+            width: var(--base-calendar-panel-width, 100%);
+            max-width: var(--base-calendar-panel-max-width, auto);
+            padding: var(--base-calendar-panel-padding-top, 0.5rem) var(--base-calendar-panel-padding-right, 0.5rem)
+                var(--base-calendar-panel-padding-bottom, 0.5rem) var(--base-calendar-panel-padding-left, 0.5rem);
         }
         &-decade-select {
-            background: var(--calendar-decade-select-background, transparent);
-            color: var(--calendar-decade-select-color, white);
-            font-weight: var(--calendar-decade-select-font-weight, 400);
-            border-width: var(--calendar-decade-select-border-width, 1px);
-            border-style: var(--calendar-decade-select-border-style, solid);
-            border-color: var(--calendar-decade-select-border-color, var(--base-color-secondary));
-            padding: var(--calendar-decade-padding-top, 0.5rem) var(--calendar-decade-padding-right, 0.5rem)
-                var(--calendar-decade-padding-bottom, 0.5rem) var(--calendar-decade-padding-left, 0.5rem);
-            border-radius: var(--calendar-decade-radius, 0.425rem);
-            width: var(--calendar-decade-select-width, 100%);
-            max-width: var(--calendar-decade-select-width, 8.5rem);
-            text-align: var(--calendar-decade-select-text-align, left);
-            display: var(--calendar-decade-select-display, inline-flex);
-            justify-content: var(--calendar-decade-select-display-content, space-between);
-            align-items: var(--calendar-decade-select-display-align, center);
+            background: var(--base-calendar-decade-select-background, transparent);
+            color: var(--base-calendar-decade-select-color, white);
+            font-weight: var(--base-calendar-decade-select-font-weight, 400);
+            border-width: var(--base-calendar-decade-select-border-width, 1px);
+            border-style: var(--base-calendar-decade-select-border-style, solid);
+            border-color: var(--base-calendar-decade-select-border-color, var(--base-color-secondary));
+            padding: var(--base-calendar-decade-padding-top, 0.5rem) var(--base-calendar-decade-padding-right, 0.5rem)
+                var(--base-calendar-decade-padding-bottom, 0.5rem) var(--base-calendar-decade-padding-left, 0.5rem);
+            border-radius: var(--base-calendar-decade-radius, 0.425rem);
+            width: var(--base-calendar-decade-select-width, 100%);
+            max-width: var(--base-calendar-decade-select-width, 8.5rem);
+            text-align: var(--base-calendar-decade-select-text-align, left);
+            display: var(--base-calendar-decade-select-display, inline-flex);
+            justify-content: var(--base-calendar-decade-select-display-content, space-between);
+            align-items: var(--base-calendar-decade-select-display-align, center);
             transition: all var(--base-transition-fast) linear;
             &:after {
                 content: '';
@@ -60,23 +60,26 @@ export const CalendarBaseStyled = css`
                 vertical-align: middle;
                 transform: rotate(180deg);
                 transition: transform var(--base-transition-fast) linear;
-                background-image: var(--calendar-decade-select-arrow-background-image, var(--calendar-arrow-background-image));
-                background-position: var(--calendar-decade-select-arrow-background-position, center);
-                background-repeat: var(--calendar-decade-select-arrow-background-repeat, no-repeat);
-                transform: var(--calendar-decade-select-arrow-rotate, rotate(90deg));
+                background-image: var(--base-calendar-decade-select-arrow-background-image, var(--base-calendar-arrow-background-image));
+                background-position: var(--base-calendar-decade-select-arrow-background-position, center);
+                background-repeat: var(--base-calendar-decade-select-arrow-background-repeat, no-repeat);
+                transform: var(--base-calendar-decade-select-arrow-rotate, rotate(90deg));
             }
             &:hover {
-                background: var(--calendar-decade-select-hover-background, transparent);
-                color: var(--calendar-decade-select-hover-color, white);
-                font-weight: var(--calendar-decade-select-hover-font-weight, 400);
-                border-width: var(--calendar-decade-select-hover-border-width, 1px);
-                border-style: var(--calendar-decade-select-hover-border-style, solid);
-                border-color: var(--calendar-decade-select-hover-border-color, var(--base-color-secondary));
+                background: var(--base-calendar-decade-select-hover-background, transparent);
+                color: var(--base-calendar-decade-select-hover-color, white);
+                font-weight: var(--base-calendar-decade-select-hover-font-weight, 400);
+                border-width: var(--base-calendar-decade-select-hover-border-width, 1px);
+                border-style: var(--base-calendar-decade-select-hover-border-style, solid);
+                border-color: var(--base-calendar-decade-select-hover-border-color, var(--base-color-secondary));
                 &:after {
-                    background-image: var(--calendar-decade-select-arrow-background-image, var(--calendar-arrow-background-image));
-                    background-position: var(--calendar-decade-select-arrow-background-position, center);
-                    background-repeat: var(--calendar-decade-select-arrow-background-repeat, no-repeat);
-                    transform: var(--calendar-decade-select-arrow-rotate, rotate(90deg));
+                    background-image: var(
+                        --base-calendar-decade-select-arrow-background-image,
+                        var(--base-calendar-arrow-background-image)
+                    );
+                    background-position: var(--base-calendar-decade-select-arrow-background-position, center);
+                    background-repeat: var(--base-calendar-decade-select-arrow-background-repeat, no-repeat);
+                    transform: var(--base-calendar-decade-select-arrow-rotate, rotate(90deg));
                 }
             }
         }
@@ -84,9 +87,9 @@ export const CalendarBaseStyled = css`
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: var(--calendar-header-padding-top) var(--calendar-header-padding-right) var(--calendar-header-padding-bottom)
-                var(--calendar-header-padding-left);
-            margin-bottom: var(--calendar-header-margin-bottom, 1rem);
+            padding: var(--base-calendar-header-padding-top) var(--base-calendar-header-padding-right)
+                var(--base-calendar-header-padding-bottom) var(--base-calendar-header-padding-left);
+            margin-bottom: var(--base-calendar-header-margin-bottom, 1rem);
         }
         &-btn {
             .calendar {
@@ -101,8 +104,8 @@ export const CalendarBaseStyled = css`
                     display: inline-flex;
                     align-items: center;
                     justify-content: center;
-                    border-color: var(--calendar-arrow-border-color, transparent);
-                    background-color: var(--calendar-arrow-background-color, transparent);
+                    border-color: var(--base-calendar-arrow-border-color, transparent);
+                    background-color: var(--base-calendar-arrow-background-color, transparent);
                     background-position: center;
                     background-repeat: no-repeat;
                     i {
@@ -116,16 +119,16 @@ export const CalendarBaseStyled = css`
                     width: 1.25rem;
                     transform: rotate(180deg);
                     transition: transform var(--base-transition-fast) linear;
-                    background-image: var(--calendar-arrow-background-image);
-                    background-position: var(--calendar-arrow-background-position, center);
-                    background-repeat: var(--calendar-arrow-background-repeat, no-repeat);
+                    background-image: var(--base-calendar-arrow-background-image);
+                    background-position: var(--base-calendar-arrow-background-position, center);
+                    background-repeat: var(--base-calendar-arrow-background-repeat, no-repeat);
                     display: inline-block;
                 }
                 &-prev::before {
-                    transform: var(--calendar-arrow-prev-rotate, rotate(-90deg));
+                    transform: var(--base-calendar-arrow-prev-rotate, rotate(-90deg));
                 }
                 &-next::before {
-                    transform: var(--calendar-arrow-next-rotate, rotate(90deg));
+                    transform: var(--base-calendar-arrow-next-rotate, rotate(90deg));
                 }
             }
         }
@@ -150,12 +153,12 @@ export const CalendarBaseStyled = css`
             align-items: center;
             justify-content: center;
             text-align: center;
-            width: var(--calendar-cell-date);
+            width: var(--base-calendar-cell-date);
             height: 2.25rem;
             padding: 0;
-            color: var(--calendar-cell-weekday-color, --calendar-cell-color);
-            font-size: var(--calendar-cell-weekday-font-size, --calendar-cell-font-size);
-            font-weight: var(--calendar-cell-weekday-font-weight, --calendar-cell-font-weight);
+            color: var(--base-calendar-cell-weekday-color, --base-calendar-cell-color);
+            font-size: var(--base-calendar-cell-weekday-font-size, --base-calendar-cell-font-size);
+            font-weight: var(--base-calendar-cell-weekday-font-weight, --base-calendar-cell-font-weight);
         }
         &-cell {
             .calendar-cell-date-content {
@@ -163,15 +166,15 @@ export const CalendarBaseStyled = css`
             }
             &:not(.calendar-cell-weekdays, .calendar-cell-decade-offrange) {
                 .calendar-cell-content {
-                    border-radius: var(--calendar-cell-radius, 0.5rem);
+                    border-radius: var(--base-calendar-cell-radius, 0.5rem);
                     cursor: pointer;
                 }
             }
             &:not(.calendar-cell-date-offrange, .calendar-cell-weekdays, .calendar-cell-decade-offrange) {
                 &:hover {
                     .calendar-cell-content {
-                        color: var(--calendar-cell-hover-color);
-                        background-color: var(--calendar-cell-hover-background);
+                        color: var(--base-calendar-cell-hover-color);
+                        background-color: var(--base-calendar-cell-hover-background);
                     }
                 }
             }
@@ -179,46 +182,46 @@ export const CalendarBaseStyled = css`
         &-weekday,
         &-cell {
             &-content {
-                margin-top: var(--calendar-cell-margin-top, 0.375rem);
-                margin-right: var(--calendar-cell-margin-right, 0.375rem);
-                margin-bottom: var(--calendar-cell-margin-bottom, 0.375rem);
-                margin-left: var(--calendar-cell-margin-left, 0.375rem);
-                line-height: var(--calendar-cell-height, 2.25rem);
-                height: var(--calendar-cell-height, 2.25rem);
-                width: var(--calendar-cell-width, 2.25rem);
+                margin-top: var(--base-calendar-cell-margin-top, 0.375rem);
+                margin-right: var(--base-calendar-cell-margin-right, 0.375rem);
+                margin-bottom: var(--base-calendar-cell-margin-bottom, 0.375rem);
+                margin-left: var(--base-calendar-cell-margin-left, 0.375rem);
+                line-height: var(--base-calendar-cell-height, 2.25rem);
+                height: var(--base-calendar-cell-height, 2.25rem);
+                width: var(--base-calendar-cell-width, 2.25rem);
                 display: block;
             }
         }
         &-cell-date {
             &-content {
-                width: var(--calendar-cell-date-width, 2.25rem);
+                width: var(--base-calendar-cell-date-width, 2.25rem);
             }
             &-offrange {
                 .calendar-cell-date-content {
-                    color: var(--calendar-cell-offrange-color);
-                    background-color: var(--calendar-cell-offrange-background);
+                    color: var(--base-calendar-cell-offrange-color);
+                    background-color: var(--base-calendar-cell-offrange-background);
                     cursor: default !important;
                 }
             }
             &-selected {
                 .calendar-cell-date-content {
-                    color: var(--calendar-cell-selected-color);
-                    background-color: var(--calendar-cell-selected-background);
+                    color: var(--base-calendar-cell-selected-color);
+                    background-color: var(--base-calendar-cell-selected-background);
                 }
             }
             &:hover {
                 &:not(.calendar-cell-date-offrange) {
                     .calendar-cell-date-content {
-                        color: var(--calendar-cell-hover-color);
-                        background-color: var(--calendar-cell-hover-background);
+                        color: var(--base-calendar-cell-hover-color);
+                        background-color: var(--base-calendar-cell-hover-background);
                     }
                 }
             }
             &-today {
                 &:not(.calendar-cell-date-offrange) {
                     .calendar-cell-date-content {
-                        color: var(--calendar-cell-today-color);
-                        background-color: var(--calendar-cell-today-background);
+                        color: var(--base-calendar-cell-today-color);
+                        background-color: var(--base-calendar-cell-today-background);
                         &:hover {
                             background-color: $primary;
                         }
@@ -228,53 +231,53 @@ export const CalendarBaseStyled = css`
         }
         &-cell-month {
             &-content {
-                width: var(--calendar-cell-month-width, 4.5rem);
+                width: var(--base-calendar-cell-month-width, 4.5rem);
             }
         }
         &-cell-decade {
             &-content {
-                width: var(--calendar-cell-decade-width, 4.5rem);
+                width: var(--base-calendar-cell-decade-width, 4.5rem);
             }
             &-offrange {
                 .calendar-cell-decade-content {
-                    color: var(--calendar-cell-offrange-color);
-                    background-color: var(--calendar-cell-offrange-background);
+                    color: var(--base-calendar-cell-offrange-color);
+                    background-color: var(--base-calendar-cell-offrange-background);
                     cursor: default;
                 }
             }
         }
         &-inner {
-            padding: var(--calendar-content-padding-top) var(--calendar-content-padding-right) var(--calendar-content-padding-bottom)
-                var(--calendar-content-padding-left);
+            padding: var(--base-calendar-content-padding-top) var(--base-calendar-content-padding-right)
+                var(--base-calendar-content-padding-bottom) var(--base-calendar-content-padding-left);
         }
         &-show-time {
-            text-align: var(--calendar-show-time-align, center);
-            padding: var(--calendar-show-time-padding-top, 0) var(--calendar-show-time-padding-right, 1.5rem)
-                var(--calendar-show-time-padding-bottom, 1rem) var(--calendar-show-time-padding-left, 1.5rem);
+            text-align: var(--base-calendar-show-time-align, center);
+            padding: var(--base-calendar-show-time-padding-top, 0) var(--base-calendar-show-time-padding-right, 1.5rem)
+                var(--base-calendar-show-time-padding-bottom, 1rem) var(--base-calendar-show-time-padding-left, 1.5rem);
             &-hr {
                 display: block;
                 border: 0;
-                border-bottom-width: var(--calendar-show-time-border-width, 1px);
-                border-style: var(--calendar-show-time-border-style, solid);
-                border-color: var(--calendar-show-time-border-color, var(--base-color-secondary));
-                margin-top: var(--calendar-show-time-margin-top, 0);
-                margin-bottom: var(--calendar-show-time-margin-bottom, 1rem);
+                border-bottom-width: var(--base-calendar-show-time-border-width, 1px);
+                border-style: var(--base-calendar-show-time-border-style, solid);
+                border-color: var(--base-calendar-show-time-border-color, var(--base-color-secondary));
+                margin-top: var(--base-calendar-show-time-margin-top, 0);
+                margin-bottom: var(--base-calendar-show-time-margin-bottom, 1rem);
             }
             .time-picker {
-                margin-bottom: var(--calendar-show-time-picker-margin-bottom, 1rem);
+                margin-bottom: var(--base-calendar-show-time-picker-margin-bottom, 1rem);
             }
         }
         &-footer-btn {
             width: 100%;
-            font-weight: var(--calendar-footer-button-font-weight, 500);
+            font-weight: var(--base-calendar-footer-button-font-weight, 500);
 
             &:first-child {
-                margin-right: var(--calendar-footer-button-margin-right, 0.5rem);
+                margin-right: var(--base-calendar-footer-button-margin-right, 0.5rem);
             }
         }
         &-button-group {
-            display: var(--calendar-footer-group-display, flex);
-            justify-content: var(--calendar-footer-group-content);
+            display: var(--base-calendar-footer-group-display, flex);
+            justify-content: var(--base-calendar-footer-group-content);
         }
     }
     ${TimePickerBaseStyled}

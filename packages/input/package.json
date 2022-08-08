@@ -1,7 +1,7 @@
 {
-    "name": "@nixjs23n6/baseui-pagination",
+    "name": "@nixjs23n6/baseui-input",
     "version": "1.0.12-alpha.0",
-    "description": "Pagination",
+    "description": "Input",
     "author": {
         "url": "https://github.com/nixjs",
         "name": "nghinv"
@@ -45,6 +45,11 @@
         "@nixjs23n6/baseui-hook": "^1.0.12-alpha.0",
         "classnames": ">=2",
         "react": "^16.8.0 || ^17 || ^18",
+        "react-dom": "^16.8.0 || ^17 || ^18",
         "styled-components": ">=5"
+    },
+    "dependencies": {
+        "@popperjs/core": "^2.11.5",
+        "react-popper": "^2.3.0"
     }
 }

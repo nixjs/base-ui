@@ -1,4 +1,4 @@
-# @nixjs23n6/baseui-tab
+# @nixjs23n6/baseui-tooltip
 
 A simple text popup tip.
 
