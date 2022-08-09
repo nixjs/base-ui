@@ -6,7 +6,7 @@ export default {
     title: 'Data Entry/Countdown',
     argTypes: {
         target: {
-            description: 'Timestamp in the future.',
+            description: 'Timestamp in the future (seconds)',
             type: { name: 'string', required: true }
         },
         showDay: {

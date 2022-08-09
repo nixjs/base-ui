@@ -5,8 +5,8 @@ export const getPad = (n: number | string): string => {
 }
 
 export const getCountdown = (target: number): CountdownTypes.CountdownTimeProp => {
-    const currentDate = new Date().getTime()
-    let secondsLeft = (target - currentDate) / 1000
+    const currentDate = new Date().getTime() / 1000
+    let secondsLeft = target - currentDate
 
     const days = getPad(parseInt(String(secondsLeft / 86400), 10))
     secondsLeft = secondsLeft % 86400
