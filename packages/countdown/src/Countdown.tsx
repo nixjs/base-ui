@@ -11,7 +11,7 @@ export interface CountdownTimerPropArg {
     showMinute?: boolean
     showSecond?: boolean
     showLabel?: boolean
-    onComplete?: () => void
+    onComplete?: (status: CountdownTypes.Status) => void
     options?: CountdownTypes.CountdownTimerOptionals
 }
 
@@ -40,7 +40,7 @@ export const Countdown: React.FC<CountdownTimerPropArg> = ({
     React.useEffect(() => {
         const { days, hours, minutes, seconds } = time
         const total = Number(days) + Number(hours) + Number(minutes) + Number(seconds)
-        if (total <= 0 && typeof onComplete === 'function') onComplete()
+        if (total <= 0 && typeof onComplete === 'function') onComplete('COMPLETED')
     }, [time])
 
     React.useEffect(() => {
