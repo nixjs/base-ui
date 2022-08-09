@@ -36,19 +36,23 @@ export const Countdown: React.FC<CountdownTimerPropArg> = ({
         minutes: 0,
         seconds: 0
     })
+    const timerRef = React.useRef(null as NodeJS.Timeout | null)
 
     React.useEffect(() => {
-        const { days, hours, minutes, seconds } = time
-        const total = Number(days) + Number(hours) + Number(minutes) + Number(seconds)
-        if (total <= 0 && typeof onComplete === 'function') onComplete('COMPLETED')
-    }, [time])
+        if (target > 0) {
+            const cur = new Date().getTime() / 1000
+            if (target - cur <= 0 && typeof onComplete === 'function') onComplete('COMPLETED')
+        }
+    }, [time, target])
 
     React.useEffect(() => {
-        const timerRef = setInterval(() => {
-            setTime(() => getCountdown(target))
-        }, 1000)
+        if (target > 0) {
+            timerRef.current = setInterval(() => {
+                setTime(() => getCountdown(target))
+            }, 1000)
+        }
         return () => {
-            clearInterval(timerRef)
+            timerRef.current && clearInterval(timerRef.current)
         }
     }, [target])
 
