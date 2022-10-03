@@ -29,6 +29,7 @@ export const ModalStyled = styled.div<StyledProps>`
     --base-modal-button-close-top: 0.25rem;
     --base-modal-button-close-right: 0.25rem;
     .modal {
+        display: none;
         &-btn-close {
             width: 2.5rem;
             height: 2.5rem;
@@ -70,6 +71,7 @@ export const ModalStyled = styled.div<StyledProps>`
             display: none;
         }
         &.active {
+            display: block;
             .modal {
                 &-overlay {
                     display: block;

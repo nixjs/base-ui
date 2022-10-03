@@ -37,6 +37,7 @@ const BaseModal = Utils.forwardRefWithAs(function BaseModal<TTag extends React.E
             dialogClassName?: string
             containerClassName?: string
             contentClassName?: string
+            delay?: number
         } & StyledProps,
     ref: React.Ref<HTMLDivElement>
 ) {
@@ -51,6 +52,7 @@ const BaseModal = Utils.forwardRefWithAs(function BaseModal<TTag extends React.E
         animation = false,
         animationName = 'fadeIn',
         animationDuration,
+        delay = 100,
         open = false,
         unmountOnExit = false,
         closeOnEsc = true,
@@ -75,6 +77,9 @@ const BaseModal = Utils.forwardRefWithAs(function BaseModal<TTag extends React.E
     useIsomorphicEffect(() => {
         if (!open || !ownerDocument) return () => null
         setContainer(ownerDocument.getElementById('react-modal') || createEl(ownerDocument, 'react-modal'))
+        setTimeout(() => {
+            internalPortalRootRef.current?.classList.add('active')
+        }, delay)
 
         return () => {
             if (!container) return
@@ -85,7 +90,7 @@ const BaseModal = Utils.forwardRefWithAs(function BaseModal<TTag extends React.E
                 } else {
                     internalPortalRootRef.current?.classList.add('inactive')
                 }
-            }, 100)
+            }, delay)
         }
     }, [container, open])
 
@@ -110,7 +115,7 @@ const BaseModal = Utils.forwardRefWithAs(function BaseModal<TTag extends React.E
         ? null
         : createPortal(
               <ModalStyled overrideStyled={props.overrideStyled}>
-                  <div ref={portalRef} id={id} className={classNames('modal', className, { active: open })}>
+                  <div ref={portalRef} id={id} className={classNames('modal', className)}>
                       <div className={classNames('modal-overlay', overlayClassName)} aria-hidden="true" />
                       <Transition
                           in={props.open}
@@ -175,6 +180,7 @@ const ModalRoot = Utils.forwardRefWithAs(function Modal<TTag extends React.Eleme
         dialogClassName?: string
         containerClassName?: string
         contentClassName?: string
+        delay?: number
     } & AnimationPropArg &
         StyledProps,
     ref: React.Ref<HTMLElement>

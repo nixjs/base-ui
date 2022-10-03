@@ -287,7 +287,7 @@ export const UnmountOnExit: React.FC = () => {
             </Button>
             <br />
             <br />
-            <Modal as={'div'} open={open} onClose={onCloseModal} unmountOnExit closeOnEsc>
+            <Modal as={'div'} open={open} onClose={onCloseModal} unmountOnExit closeOnEsc animation animationName="fadeIn">
                 <Modal.Header className="mb-16">
                     <h3>Payment successful</h3>
                 </Modal.Header>
