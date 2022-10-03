@@ -33,6 +33,10 @@ const BaseModal = Utils.forwardRefWithAs(function BaseModal<TTag extends React.E
         AnimationPropArg & {
             open?: boolean
             unmountOnExit?: boolean
+            overlayClassName?: string
+            dialogClassName?: string
+            containerClassName?: string
+            contentClassName?: string
         } & StyledProps,
     ref: React.Ref<HTMLDivElement>
 ) {
@@ -40,6 +44,10 @@ const BaseModal = Utils.forwardRefWithAs(function BaseModal<TTag extends React.E
         id = 'react-modal',
         children,
         className,
+        dialogClassName,
+        overlayClassName,
+        containerClassName,
+        contentClassName,
         animation = false,
         animationName = 'fadeIn',
         animationDuration,
@@ -103,7 +111,7 @@ const BaseModal = Utils.forwardRefWithAs(function BaseModal<TTag extends React.E
         : createPortal(
               <ModalStyled overrideStyled={props.overrideStyled}>
                   <div ref={portalRef} id={id} className={classNames('modal', className, { active: open })}>
-                      <div className="modal-overlay" aria-hidden="true" />
+                      <div className={classNames('modal-overlay', overlayClassName)} aria-hidden="true" />
                       <Transition
                           in={props.open}
                           timeout={animationDuration || DURATION_MS}
@@ -112,9 +120,9 @@ const BaseModal = Utils.forwardRefWithAs(function BaseModal<TTag extends React.E
                           nodeRef={containerRef}
                       >
                           {(state) => (
-                              <div className="modal-container" ref={containerRef}>
+                              <div className={classNames('modal-container', containerClassName)} ref={containerRef}>
                                   <div
-                                      className="modal-dialog"
+                                      className={classNames('modal-dialog', dialogClassName)}
                                       style={
                                           animation
                                               ? {
@@ -125,7 +133,7 @@ const BaseModal = Utils.forwardRefWithAs(function BaseModal<TTag extends React.E
                                       }
                                   >
                                       <span className="modal-center" aria-hidden="true" />
-                                      <div ref={internalPortalContainerRef} className="modal-content">
+                                      <div ref={internalPortalContainerRef} className={classNames('modal-content', contentClassName)}>
                                           <>
                                               {props.showClose && (
                                                   <button type="button" className="modal-btn-close" aria-label="Close" onClick={onClose}>

@@ -13,7 +13,7 @@ export const Body = Utils.forwardRefWithAs(function Body<TTag extends React.Elem
     return React.createElement(
         (Tag as React.ElementType) || DEFAULT_BODY_TAG,
         {
-            className: classNames('base-modal-header', className),
+            className: classNames('base-modal-body', className),
             ref,
             id: 'main'
         },

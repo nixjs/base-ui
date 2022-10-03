@@ -8,7 +8,7 @@ export namespace GridTypes {
     interface ColumnOrderOffsetProps {
         size: BooleanOrStringOrNumberValue
         order: StringOrNumberValue
-        offset: StringOrNumberValue
+        offset?: StringOrNumberValue
     }
 
     export interface BaseProps {
