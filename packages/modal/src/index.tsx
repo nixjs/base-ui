@@ -89,6 +89,7 @@ const BaseModal = Utils.forwardRefWithAs(function BaseModal<TTag extends React.E
                 if (unmountOnExit) {
                     container.remove()
                 } else {
+                    console.log('1232132')
                     internalPortalRootRef.current?.classList.remove('active')
                     internalPortalRootRef.current?.classList.add('inactive')
                 }
@@ -117,7 +118,14 @@ const BaseModal = Utils.forwardRefWithAs(function BaseModal<TTag extends React.E
         ? null
         : createPortal(
               <ModalStyled overrideStyled={props.overrideStyled}>
-                  <div ref={portalRef} id={id} className={classNames('modal', className)}>
+                  <div
+                      ref={portalRef}
+                      id={id}
+                      className={classNames('modal', className, {
+                          active: open,
+                          inactive: !open
+                      })}
+                  >
                       <div className={classNames('modal-overlay', overlayClassName)} aria-hidden="true" />
                       <Transition
                           in={props.open}

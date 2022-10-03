@@ -44,37 +44,37 @@ export const defaultStyle = {
 
 export const transitionStyles: AnimationProp = {
     fadeIn: {
-        entering: { opacity: 0, transform: 'scale(0.9)' },
+        entering: { opacity: 0, transform: 'scale(0)' },
         entered: {
             opacity: 1,
-            transform: 'translateX(0)',
+            transform: 'scale(1)',
             transition: `opacity ${DURATION_MS}ms, transform ${DURATION_MS}ms`
         },
         exiting: {
             opacity: 0,
-            transform: 'scale(0.9)',
+            transform: 'scale(0)',
             transition: `opacity ${DURATION_MS}ms, transform ${DURATION_MS}ms`
         },
-        exited: { opacity: 1, transform: 'scale(0.9)' }
+        exited: { opacity: 1, transform: 'scale(1)' }
     },
     fadeInDown: {
-        entering: { opacity: 0, transform: 'translateY(-10%)' },
+        entering: { opacity: 0, transform: 'translateY(-100%)' },
         entered: {
             opacity: 1,
-            transform: 'none',
+            transform: 'translateY(0%)',
             transition: `opacity ${DURATION_MS}ms, transform ${DURATION_MS}ms`
         },
         exiting: {
-            opacity: 0,
-            transform: 'translateY(-10%)',
+            transform: 'translateY(0%)',
             transition: `opacity ${DURATION_MS}ms, transform ${DURATION_MS}ms`
         },
         exited: {
-            opacity: 1
+            opacity: 1,
+            transform: 'translateY(-100%)'
         }
     },
     fadeInUp: {
-        entering: { opacity: 0, transform: 'translateY(10%)' },
+        entering: { opacity: 0, transform: 'translateY(100%)' },
         entered: {
             opacity: 1,
             transform: 'translateX(0) translateY(0)',
@@ -82,15 +82,16 @@ export const transitionStyles: AnimationProp = {
         },
         exiting: {
             opacity: 0,
-            transform: 'translateY(10%)',
+            transform: 'translateY(0%)',
             transition: `opacity ${DURATION_MS}ms, transform ${DURATION_MS}ms`
         },
         exited: {
-            opacity: 1
+            opacity: 1,
+            transform: 'translateY(100%)'
         }
     },
     fadeInLeft: {
-        entering: { opacity: 0, transform: 'translateX(-10%)' },
+        entering: { opacity: 0, transform: 'translateX(-100%)' },
         entered: {
             opacity: 1,
             transform: 'translateX(0)',
@@ -98,15 +99,16 @@ export const transitionStyles: AnimationProp = {
         },
         exiting: {
             opacity: 0,
-            transform: 'translateX(-10%)',
+            transform: 'translateX(0%)',
             transition: `opacity ${DURATION_MS}ms, transform ${DURATION_MS}ms`
         },
         exited: {
-            opacity: 1
+            opacity: 1,
+            transform: 'translateX(-100%)'
         }
     },
     fadeInRight: {
-        entering: { opacity: 0, transform: 'translateX(10%)' },
+        entering: { opacity: 0, transform: 'translateX(100%)' },
         entered: {
             opacity: 1,
             transform: 'translateX(0)',
@@ -114,15 +116,16 @@ export const transitionStyles: AnimationProp = {
         },
         exiting: {
             opacity: 0,
-            transform: 'translateX(10%)',
+            transform: 'translateX(0%)',
             transition: `opacity ${DURATION_MS}ms, transform ${DURATION_MS}ms`
         },
         exited: {
-            opacity: 1
+            opacity: 1,
+            transform: 'translateX(100%)'
         }
     },
     slideInDown: {
-        entering: { visibility: 'hidden', transform: 'translate3d(0, -10%, 0)' },
+        entering: { visibility: 'hidden', transform: 'translate3d(0, -100%, 0)' },
         entered: {
             visibility: 'visible',
             transform: 'translate3d(0, 0, 0)',
@@ -130,15 +133,16 @@ export const transitionStyles: AnimationProp = {
         },
         exiting: {
             visibility: 'hidden',
-            transform: 'translate3d(0, -10%, 0)',
+            transform: 'translate3d(0, 0, 0)',
             transition: `visibility ${DURATION_MS}ms, transform ${DURATION_MS}ms`
         },
         exited: {
-            visibility: 'visible'
+            visibility: 'visible',
+            transform: 'translate3d(0, -100%, 0)'
         }
     },
     slideInUp: {
-        entering: { visibility: 'hidden', transform: 'translate3d(0, 10%, 0)' },
+        entering: { visibility: 'hidden', transform: 'translate3d(0, 100%, 0)' },
         entered: {
             visibility: 'visible',
             transform: 'translate3d(0, 0, 0)',
@@ -146,15 +150,16 @@ export const transitionStyles: AnimationProp = {
         },
         exiting: {
             visibility: 'hidden',
-            transform: 'translate3d(0, 10%, 0)',
+            transform: 'translate3d(0, 0, 0)',
             transition: `visibility ${DURATION_MS}ms, transform ${DURATION_MS}ms`
         },
         exited: {
-            visibility: 'visible'
+            visibility: 'visible',
+            transform: 'translate3d(0, 100%, 0)'
         }
     },
     slideInLeft: {
-        entering: { visibility: 'hidden', transform: 'translate3d(-10%, 0, 0)' },
+        entering: { visibility: 'hidden', transform: 'translate3d(-100%, 0, 0)' },
         entered: {
             visibility: 'visible',
             transform: 'translate3d(0, 0, 0)',
@@ -162,15 +167,16 @@ export const transitionStyles: AnimationProp = {
         },
         exiting: {
             visibility: 'hidden',
-            transform: 'translate3d(-10%, 0, 0)',
+            transform: 'translate3d(0, 0, 0)',
             transition: `visibility ${DURATION_MS}ms, transform ${DURATION_MS}ms`
         },
         exited: {
-            visibility: 'visible'
+            visibility: 'visible',
+            transform: 'translate3d(-100%, 0, 0)'
         }
     },
     slideInRight: {
-        entering: { visibility: 'hidden', transform: 'translate3d(10%, 0, 0)' },
+        entering: { visibility: 'hidden', transform: 'translate3d(100%, 0, 0)' },
         entered: {
             visibility: 'visible',
             transform: 'translate3d(0, 0, 0)',
@@ -178,11 +184,12 @@ export const transitionStyles: AnimationProp = {
         },
         exiting: {
             visibility: 'hidden',
-            transform: 'translate3d(10%, 0, 0)',
+            transform: 'translate3d(0, 0, 0)',
             transition: `visibility ${DURATION_MS}ms, transform ${DURATION_MS}ms`
         },
         exited: {
-            visibility: 'visible'
+            visibility: 'visible',
+            transform: 'translate3d(100%, 0, 0)'
         }
     }
 }
