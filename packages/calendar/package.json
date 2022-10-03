@@ -41,8 +41,8 @@
         "@nixjs23n6/baseui-hook": "^1.0.22"
     },
     "peerDependencies": {
-        "@nixjs23n6/baseui-core": "^1.0.21",
-        "@nixjs23n6/baseui-hook": "^1.0.21",
+        "@nixjs23n6/baseui-core": "^1.0.22",
+        "@nixjs23n6/baseui-hook": "^1.0.22",
         "classnames": ">=2",
         "react": "^16.8.0 || ^17 || ^18",
         "react-transition-group": "^4.4.2",
