@@ -78,6 +78,7 @@ const BaseModal = Utils.forwardRefWithAs(function BaseModal<TTag extends React.E
         if (!open || !ownerDocument) return () => null
         setContainer(ownerDocument.getElementById('react-modal') || createEl(ownerDocument, 'react-modal'))
         setTimeout(() => {
+            internalPortalRootRef.current?.classList.remove('inactive')
             internalPortalRootRef.current?.classList.add('active')
         }, delay)
 
@@ -88,6 +89,7 @@ const BaseModal = Utils.forwardRefWithAs(function BaseModal<TTag extends React.E
                 if (unmountOnExit) {
                     container.remove()
                 } else {
+                    internalPortalRootRef.current?.classList.remove('active')
                     internalPortalRootRef.current?.classList.add('inactive')
                 }
             }, delay)
