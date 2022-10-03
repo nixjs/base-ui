@@ -171,6 +171,10 @@ const ModalRoot = Utils.forwardRefWithAs(function Modal<TTag extends React.Eleme
         onEsc?: () => void
         closeOnEsc?: boolean
         closeOnClickOutside?: boolean
+        overlayClassName?: string
+        dialogClassName?: string
+        containerClassName?: string
+        contentClassName?: string
     } & AnimationPropArg &
         StyledProps,
     ref: React.Ref<HTMLElement>
