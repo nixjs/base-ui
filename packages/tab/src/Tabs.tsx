@@ -64,7 +64,9 @@ export const TabRoot = Utils.forwardRefWithAs(function List<TTag extends React.E
         'defaultActive',
         'animationDuration',
         'animationName',
-        'animation'
+        'animation',
+        'overrideStyled',
+        'orientation'
     ])
 
     const ourProps = { ref: tabsRef, className: 'tabs-container' }
