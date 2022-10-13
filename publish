@@ -6,16 +6,12 @@ NODE_VERSION=$(node -p -e "require('./lerna.json').version")
 
 echo -e "\033[0;34mCurrent Version: $NODE_VERSION"
 
-yarn new-version
-git add .
-git commit -m"build: publish new version"
-git push
 yarn build
 
 for dir in $PROJECT_ROOT/*/; do
     basename=`basename "$dir"`
     version=$(cat $PROJECT_ROOT/$basename/package.json \
-  | grep version \
+  | grep version \git
   | head -1 \
   | awk -F: '{ print $2 }' \
   | sed 's/[",]//g')
