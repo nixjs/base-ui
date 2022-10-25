@@ -6,7 +6,7 @@ NODE_VERSION=$(node -p -e "require('./lerna.json').version")
 
 echo -e "\033[0;34mCurrent Version: $NODE_VERSION"
 
-yarn build
+# yarn build
 
 for dir in $PROJECT_ROOT/*/; do
     basename=`basename "$dir"`
@@ -15,11 +15,12 @@ for dir in $PROJECT_ROOT/*/; do
   | head -1 \
   | awk -F: '{ print $2 }' \
   | sed 's/[",]//g')
-    if [ $basename != "website" ]
-    then
-        text=$(echo -e "\033[0;32mPublishing the $basename packages.")
-        echo $text
-        echo $(echo -e "\033[0;32mCurrent version: $version.")
-        yarn workspace @nixjs23n6/$BASE_UI$basename publish --force --new-version $version
-    fi
+  echo $version
+    # if [ $basename != "website" ]
+    # then
+    #     text=$(echo -e "\033[0;32mPublishing the $basename packages.")
+    #     echo $text
+    #     echo $(echo -e "\033[0;32mCurrent version: $version.")
+    #     # yarn workspace @nixjs23n6/$BASE_UI$basename publish --force --new-version $version
+    # fi
 done;
