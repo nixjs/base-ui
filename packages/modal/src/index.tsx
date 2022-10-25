@@ -89,7 +89,6 @@ const BaseModal = Utils.forwardRefWithAs(function BaseModal<TTag extends React.E
                 if (unmountOnExit) {
                     container.remove()
                 } else {
-                    console.log('1232132')
                     internalPortalRootRef.current?.classList.remove('active')
                     internalPortalRootRef.current?.classList.add('inactive')
                 }
