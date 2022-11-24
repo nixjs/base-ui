@@ -43,7 +43,8 @@ export const Pagination = Utils.forwardRefWithAs(function List<TTag extends Reac
         firstEdgeLabel,
         lastEdgeLabel,
         loop = false,
-        overrideStyled
+        overrideStyled,
+        onChange
     } = props
 
     const { range, active, setPage, previous, next, first, last } = usePagination({
@@ -51,7 +52,8 @@ export const Pagination = Utils.forwardRefWithAs(function List<TTag extends Reac
         initialPage,
         total,
         siblings,
-        boundaries
+        boundaries,
+        onChange
     })
 
     const paginationRef = useSyncRefs(ref)
